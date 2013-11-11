@@ -1,0 +1,1613 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="LoginUserMaster.master.cs"
+    Inherits="ALEREIMPACT.User.LoginUserMaster" %>
+
+<%@ Register TagPrefix="ucCircles" TagName="Form" Src="~/User/ucCircles.ascx" %>
+<%@ Register TagPrefix="ucCirclesNew" TagName="Form" Src="~/User/ucCirclesNew.ascx" %>
+<%@ Register TagPrefix="ucSearchFriends" TagName="Form" Src="~/User/ucSearchFriends.ascx" %>
+<%@ Register TagPrefix="ucAcceptInvitation" TagName="Form" Src="~/User/ucAcceptInvitation.ascx" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="Page-Enter" content="blendTrans(Duration=0)" />
+    <meta http-equiv="Page-Exit" content="blendTrans(Duration=0)" />
+    <title>Our Vitality</title>
+    
+    
+    <link rel="stylesheet" href="../CSS/stylenewdesign.css" type="text/css" />
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+   
+    <link rel="stylesheet" href="../CSS/style.css" type="text/css" />
+    <link rel="stylesheet" href="../CSS/Circlestyle.css" type="text/css" />
+    <link rel="stylesheet" href="../CSS/global.css" type="text/css" />
+   
+    
+    <script type="text/javascript" language="javascript">
+   
+        function ShowWeightAddedMsg() {
+
+            if (document.getElementById('ctl00_txtWeight').value != '' && document.getElementById('ctl00_DrpWeightUnit').value != '0') {
+                document.getElementById('<%#spMsgAskWeight.ClientID %>').style.display = 'block';
+                document.getElementById('<%#spMsgAskWeight.ClientID %>').innerHTML = 'Your details are being saved ..';
+            }
+        }
+        function closeAskWeightpopUp() {
+            $('.popupWeight').hide();
+        }
+        function openWeight() {
+
+            $('.popupWeight').show();
+        }
+        function closePerosalization() {
+            $('.popup').hide();
+        }
+        function openPerosalization() {
+            $('.popup').show();
+        }
+        function handleEnter(e) {
+
+            if (e.keyCode == 13) {
+
+                e.preventDefault();
+
+            }
+
+        }
+  
+
+    </script>
+
+    <script type="text/javascript">
+
+        function checkfilesize() {
+
+            var size = document.getElementById("<%#fucircleimage.ClientID%>").files[0].size;
+
+
+            if (size > 1048576) {
+
+                alert("Image size exceeds Limit.");
+                return false;
+            }
+            else {
+
+
+                return true;
+                txtrep();
+            }
+
+
+        }
+    </script>
+
+    <style type="text/css">
+        .search_wall input
+        {
+            border: 1px solid #EEEEEE;
+            border-radius: 2px 2px 2px 2px;
+            color: #777777;
+            float: left;
+            height: 20px;
+            margin-right: 17px;
+            margin-top: -13px !important;
+            padding: 5px !important;
+            width: 318px !important;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function txtrep() {
+
+            var newtext = "Please wait...";
+            document.getElementById('<%#btncreatecircle.ClientID %>').value = newtext;
+            //           $('input:submit').attr("disabled", true);
+
+
+        }
+    </script>
+
+    <script type="text/javascript">
+        function CloseForLoginUser() {
+            $.ajax({
+                type: "POST",
+                url: "Notes.aspx/CloseForLoginUser",
+                cache: false,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function(data) {
+
+                    $('#ctl00_MdlPersonlization_backgroundElement').removeAttr('style');
+                    document.getElementById('<%# dvThanksPersonalization.ClientID%>').style.display = 'none';
+                    document.getElementById('ctl00_pnlPersonlization').style.display = 'none';
+                    $('.popup').hide();
+
+                }
+
+            });
+        }
+        function SelectSingleRadiobutton(rdbtnid) {
+
+            $.ajax({
+                type: "POST",
+                url: "Notes.aspx/SubmitPersonalizationSelection",
+                data: JSON.stringify({ "selectionId": rdbtnid }),
+                cache: false,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function(data) {
+
+
+
+                    $('#ctl00_MdlPersonlization_backgroundElement').removeAttr('style');
+
+                    $('.popup_thanks').show();
+                    document.getElementById('ctl00_pnlPersonlization').style.display = 'none';
+                    $('.popup').hide();
+
+                }
+
+
+            });
+        }
+           
+    </script>
+
+    <style type="text/css">
+        .post
+        {
+            background: url(      "../images/right_side_text.png" ) repeat scroll 0 0 rgba(0, 0, 0, 0);
+            border: medium none;
+            border-radius: 10px 0 0 10px;
+            color: #1F7071;
+            float: left;
+            font-family: arial;
+            font-size: 20px;
+            font-weight: bold;
+            height: 45px;
+            margin-top: 17px;
+            padding-left: 1px;
+            padding-top: 0;
+            width: 83px;
+        }
+        .box_height
+        {
+            border: 1px solid #CCCCCC;
+            color: #888888;
+            height: 18px;
+            padding-left: 0;
+            text-align: center;
+            width: 46px;
+        }
+        #overlay
+        {
+        }
+        .cnt223 a
+        {
+            text-decoration: none;
+        }
+        .popup_thanks
+        {
+            width: 100%;
+            margin: 0 auto;
+            display: none;
+            position: fixed;
+            z-index: 101;
+        }
+        .popup
+        {
+            width: 100%;
+            margin: 0 auto;
+            display: none;
+            position: fixed;
+            z-index: 101;
+        }
+        .cnt223
+        {
+            background: none repeat scroll 0 0 #FFFFFF;
+            border-radius: 5px 5px 5px 5px;
+            box-shadow: 0 2px 5px #454545;
+            margin: 100px auto;
+            min-height: 150px;
+            min-width: 378px;
+            padding: 12px;
+            position: relative;
+            width: 380px;
+            z-index: 103;
+        }
+        .cnt223 p
+        {
+            color: #555555;
+            text-align: justify;
+        }
+        .cnt223 p a
+        {
+            background: none repeat scroll 0 0 #444444;
+            border-radius: 5px 5px 5px 5px;
+            color: #FFFFFF;
+            float: left;
+            font-family: arial;
+            font-size: 15px;
+            font-weight: bold;
+            margin-left: 10px;
+            margin-top: 14px;
+            padding: 5px 8px;
+        }
+        .cnt223 .x
+        {
+            float: right;
+            height: 35px;
+            left: 22px;
+            position: relative;
+            top: -25px;
+            width: 34px;
+        }
+        .cnt223 .x:hover
+        {
+            cursor: pointer;
+        }
+        #ctl00_MdlPersonlization_backgroundElement
+        {
+            height: auto !important;
+        }
+        .cntWeight
+        {
+            background: none repeat scroll 0 0 #FFFFFF;
+            border-radius: 5px 5px 5px 5px;
+            box-shadow: 0 2px 5px #454545;
+            margin: 70px auto;
+            min-height: 150px;
+            min-width: 378px;
+            padding: 40px;
+            position: relative;
+            width: 380px;
+            z-index: 103;
+        }
+        .cntWeight p
+        {
+            color: #555555;
+            text-align: justify;
+            margin-bottom: 40px;
+        }
+        .cntWeight p a
+        {
+            background: none repeat scroll 0 0 #444444;
+            border-radius: 5px 5px 5px 5px;
+            color: #FFFFFF;
+            float: left;
+            font-family: arial;
+            font-size: 15px;
+            font-weight: bold;
+            margin-left: 10px;
+            margin-top: 14px;
+            padding: 5px 8px;
+        }
+    </style>
+
+    <script type='text/javascript'>
+        $(function() {
+            //            var overlay = $('<div id="overlay"></div>');
+            //            overlay.show();
+            //            overlay.appendTo(document.body);
+
+            $('.close').click(function() {
+                CloseForLoginUser();
+                $('.popup').hide();
+                //overlay.appendTo(document.body).remove();
+                return false;
+            });
+
+            $('.x').click(function() {
+                CloseForLoginUser();
+                $('.popup').hide();
+                //overlay.appendTo(document.body).remove();
+                return false;
+            });
+            $(".x_OpenPeronAgain").click(function() {
+                $('.pnlPersonlization').show();
+                return false;
+            });
+
+            $(".Close_PopUp").click(function() {
+
+                $('.popup').hide();
+                //overlay.appendTo(document.body).remove();
+                return false;
+            });
+
+
+            $('.close_thanksPopUp').click(function() {
+
+                document.getElementById('<%# dvThanksPersonalization.ClientID%>').style.display = 'none';
+
+                //overlay.appendTo(document.body).remove();
+                return false;
+            });
+        });
+    </script>
+
+    <style type="text/css">
+        .progressIndicatorStyle
+        {
+            width: 200px;
+            height: 200px;
+            top: 50%;
+            left: 40%;
+            z-index: 99999;
+            position: absolute;
+            display: block;
+        }
+        .info-container a
+        {
+            background: none repeat scroll 0 0 #FFFFFF;
+            border-radius: 150px 150px 150px 150px;
+            color: #444444 !important;
+            font-size: 14px;
+            padding: 3px;
+            text-decoration: none;
+        }
+        .slidingDiv
+        {
+            height: 300px;
+            background-color: #FFFFFF;
+            padding: 20px;
+            margin-top: 10px;
+            border-bottom: 5px solid #3399FF;
+        }
+        .show_hide
+        {
+            display: none;
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(function() {
+            $(".classme").click(function() {
+
+                var email = document.getElementById('<%#txtEmail.ClientID %>').value;
+                var msg1 = document.getElementById('<%#txtmessage.ClientID %>').value;
+                if (email != "") {
+
+
+
+
+                    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+                    if (!filter.test(email)) {
+
+                        document.getElementById('<%#SpanEmail.ClientID %>').style.display = 'none';
+                    }
+                    else {
+                        document.getElementById('<%#SpanInvite.ClientID %>').style.width = '80px';
+                        document.getElementById('<%#SpanInvite.ClientID %>').innerHTML = "Sending...";
+
+                        document.getElementById('<%#SpanEmail.ClientID %>').style.display = 'none';
+                        $.ajax(
+                    {
+                        type: "POST",
+                        url: "Notes.aspx/SendMail",
+
+                        cache: false,
+                        contentType: "application/json; charset=utf-8",
+                        data: JSON.stringify({ "email": email, "msg": msg1 }),
+                        dataType: "json",
+                        success: function(msg) {
+
+                            document.getElementById('<%#SpanInvite.ClientID %>').style.width = '60px';
+                            document.getElementById('<%#SpanInvite.ClientID %>').innerHTML = "Invite";
+                            document.getElementById('<%#spBlankEmailMsg.ClientID %>').style.display = 'block';
+                            document.getElementById('<%#spBlankEmailMsg.ClientID %>').innerHTML = "Invitation Successfully sent.";
+
+
+
+                            $(document).ready(function() {
+                                setTimeout(function() {
+
+                                    document.getElementById('<%#spBlankEmailMsg.ClientID %>').style.display = 'none';
+                                }, 3000); // <-- time in milliseconds
+                            });
+
+                        },
+                        error: function(r) {
+
+                            document.getElementById('<%#SpanInvite.ClientID %>').style.width = '60px';
+                            document.getElementById('<%#SpanInvite.ClientID %>').innerHTML = "Invite";
+
+
+                        }
+                    });
+                        document.getElementById('<%#txtEmail.ClientID %>').value = "";
+                        document.getElementById('<%#txtmessage.ClientID %>').value = "";
+                    }
+                }
+
+                else {
+                    document.getElementById('<%#SpanEmail.ClientID %>').style.display = 'block';
+                    document.getElementById('<%#spanMsg.ClientID %>').style.marginLeft = '1px';
+                    document.getElementById('<%#txtmessage.ClientID %>').style.marginTop = '12px';
+                    document.getElementById('<%#SpanEmail.ClientID %>').innerHTML = "Email required";
+                }
+            });
+        });
+ 
+
+    </script>
+
+    <script type="text/javascript" src="../scripts/jquery.js"></script>
+
+    <script type="text/javascript">
+        function pageLoad() {
+
+            var uid = '';
+
+            document.getElementById('<%#iframeselcircle.ClientID %>').src = "TopselectedCircle.aspx?uid=" + uid;
+
+        }    
+   
+    </script>
+
+    <script type="text/javascript">
+
+        function closeProgressIndicator(elem) {
+
+            $("#progressIndicator").hide();
+
+            //find the height of the internal page            
+            //            var the_height = 300;
+            //            var padding = 30; //to avoid the scroll bar
+            //            try {
+            //                if (elem.contentWindow && elem.contentWindow.document) {
+            //                    the_height = elem.contentDocument.documentElement.scrollHeight;
+
+            //                    elem.height = the_height + "px";
+            //                }
+            //            }
+            //            catch (e) { }
+            //            //change the height of the iframe
+            //            elem.height = the_height + padding;
+            //find the height of the internal page
+
+        }    
+    </script>
+
+    <script type="text/javascript">
+        function parentwindow2() {
+
+            window.parent.location.href = "Wall.aspx";
+        }
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="../CSS/index.css" />
+    <link rel="stylesheet" type="text/css" href="../CSS/reset.css" />
+
+    <script src="../scripts/jquery-1.3.2.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        function GetMemberList(circleId, createdById) {
+
+            document.getElementById("dvmissions").className = "nav_list_miss ";
+            document.getElementById("dvnotes").className = "nav_list_miss sel_miss";
+            document.getElementById("dvinspirators").className = "nav_list_miss";
+            document.getElementById("dvLog").className = "nav_list_miss";
+            document.getElementById('<%#iframeProfile.ClientID %>').src = "MemberList.aspx?cid=" + circleId + "&uid=" + createdById;
+            document.getElementById('<%#lblinksel.ClientID %>').value = "select";
+            document.getElementById('<%#iframeselcircle.ClientID %>').src = "TopselectedCircle.aspx?uid=" + createdById + "&cid=" + circleId + "&cnam=" + cnam + "&selcir=" + selcircle;
+
+        }
+
+        function ToUserProfile(id) {
+
+            document.getElementById("dvmissions").className = "nav_list_miss ";
+            document.getElementById("dvnotes").className = "nav_list_miss sel_miss";
+            document.getElementById("dvinspirators").className = "nav_list_miss";
+            document.getElementById("dvLog").className = "nav_list_miss";
+            document.getElementById('<%#iframeProfile.ClientID %>').src = "MyProfile.aspx?val=" + id + "&Frd=1";
+            document.getElementById('<%#lblinksel.ClientID %>').value = "select";
+        }
+
+    </script>
+
+
+    <script type="text/javascript">
+        function GetMissionList() {
+        
+            function OnSuccess(response) {
+            alert(response.d);
+            }
+
+            document.getElementById("dvmissions").className = "nav_list_miss sel_miss";
+            document.getElementById("dvnotes").className = "nav_list_miss";
+            document.getElementById("dvinspirators").className = "nav_list_miss";
+            document.getElementById("dvLog").className = "nav_list_miss";
+            document.getElementById('<%#iframeProfile.ClientID %>').src = "Missions.aspx?s=true";
+            document.getElementById('<%#lblinksel.ClientID %>').value = "select";
+
+        }
+    </script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+            setTimeout(function() {
+
+                document.getElementById('<%#spBlankEmailMsg.ClientID %>').style.display = 'none';
+            }, 6000); // <-- time in milliseconds
+        });
+
+    </script>
+
+    <script language="javascript" type="text/javascript">
+
+        function circleselection(selectedId, e) {
+
+            if (document.getElementById('<%#lblinksel.ClientID %>').value != undefined) {
+                document.getElementById('<%#lblinksel.ClientID %>').value = undefined;
+                return false;
+            }
+            else {
+
+                $("#progressIndicator").show();
+                document.getElementById('<%#lblinksel.ClientID %>').value = undefined;
+
+                var userid = selectedId.id.replace('dvcirclecolor', 'hndUserId');
+                var circleid = selectedId.id.replace('dvcirclecolor', 'hndCircleId');
+                var circlename = selectedId.id.replace('dvcirclecolor', 'hndCName');
+                var selectcircle = selectedId.id.replace('dvcirclecolor', 'repid');
+                var loginid = selectedId.id.replace('dvcirclecolor', 'hndloginid');
+                var pk_user_circle_id = selectedId.id.replace('dvcirclecolor', 'hnducId');
+                var uid = document.getElementById(userid).value;
+                var cid = document.getElementById(circleid).value;
+                var cnam = document.getElementById(circlename).value;
+                var selcircle = document.getElementById(selectcircle).value;
+                var LogedInUser = document.getElementById(loginid).value;
+                var Pk_user_circleid = document.getElementById(pk_user_circle_id).value;
+                //dvserchfrds
+
+                if (LogedInUser != uid) {
+
+                    document.getElementById('<%#dvserchfrds.ClientID %>').style.display = 'none';
+                    document.getElementById('<%#img.ClientID %>').style.marginTop = '0px';
+                }
+                else {
+                    document.getElementById('<%#dvserchfrds.ClientID %>').style.display = 'block';
+                    document.getElementById('<%#img.ClientID %>').style.marginTop = '-72px';
+
+                }
+
+
+                document.getElementById("dvnotes").className = "nav_list_miss sel_miss";
+                document.getElementById("dvinspirators").className = "nav_list_miss";
+                document.getElementById("dvmissions").className = "nav_list_miss";
+                document.getElementById("dvLog").className = "nav_list_miss";
+                document.getElementById('<%#iframeselcircle.ClientID %>').src = "TopselectedCircle.aspx?uid=" + uid + "&cid=" + cid + "&cnam=" + cnam + "&selcir=" + selcircle;
+                document.getElementById('<%#lblMessage.ClientID %>').value = document.getElementById(selectcircle).value;
+
+                document.getElementById('<%#iframeProfile.ClientID %>').src = "Notes.aspx?uid=" + uid + "&cid=" + cid + "&cnam=" + cnam + "&selcir=" + selcircle + "&pk_usercircle_id=" + Pk_user_circleid;
+
+
+
+
+
+
+            }
+
+        }
+    </script>
+
+    <script type="text/javascript">
+        function colorChanged(sender) {
+            sender.get_element().style.color =
+       "#" + sender.get_selectedColor();
+        } 
+    </script>
+
+    <script type="text/javascript">
+        function Clear() {
+            if (document.getElementById('<%#txtcirclename.ClientID %>').value.length > 0) {
+                document.getElementById('<%#txtcirclename.ClientID %>').value = "";
+            }
+            if (document.getElementById('<%#txtcirclecolor.ClientID %>').value.length > 0) {
+                document.getElementById('<%#txtcirclecolor.ClientID %>').value = "";
+            }
+            if (document.getElementById('<%#fucircleimage.ClientID %>').value.length > 0) {
+                document.getElementById('<%#fucircleimage.ClientID %>').value = "";
+            }
+            if (document.getElementById('<%#ddlcirclespec.ClientID %>').selectedIndex > 0) {
+                document.getElementById('<%#ddlcirclespec.ClientID %>').selectedIndex = 0;
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        function Close() {
+            if (document.getElementById('<%#DivEmail.ClientID %>').style.display = 'block') {
+                document.getElementById('<%#DivEmail.ClientID %>').style.display = 'none';
+                document.getElementById('<%#txtEmail.ClientID %>').value = "";
+                document.getElementById('<%#txtmessage.ClientID %>').value = "";
+                document.getElementById('<%#SpanEmail.ClientID %>').style.display = 'none';
+                document.getElementById('ctl00_regEmail').style.display = 'none';
+                document.getElementById('<%#spBlankEmailMsg.ClientID %>').style.display = 'none';
+            }
+        }
+    </script>
+
+    
+
+    <script type="text/javascript">
+        // config
+
+        var d1 = 200;
+        var d2 = 100;
+        var height = 600;
+        var delay = 300;
+        var xindent = 40;
+        var yindent = 100;
+
+        var subr = 70;
+        var subd = 50;
+        var subf = 5;
+        var subdf = 1.2;
+
+        Math.sign = function(x) {
+            return x > 0 ? 1 : x < 0 ? -1 : 0;
+        };
+
+        $(function() {
+            var container = $("#bubbles");
+            var bubbles = container.children();
+            container.select = function(num) {
+                var t = delay;
+
+                if (num === undefined) {
+                    var label = $('#<%#lblMessage.ClientID%>').val();
+
+                    // alert(label);
+                    var num1 = label;
+                    num = num1
+                    //  alert(num);
+                    //num = 0;
+                    t = 0;
+                }
+                //  alert(num);
+                var length = bubbles.length;
+                var c = Math.max(num, length - num - 1);
+                var middle = height / 2;
+                var df = Math.PI / 2 / c;
+                var dy = (middle - yindent) / c;
+                bubbles.each(function(i) {
+                    var q = i - num;
+                    var d = q === 0 ? d1 : d2;
+                    var x = xindent * Math.cos(df * q);
+                    var y = middle + dy * q + (yindent - dy) * Math.sign(q) - d / 2;
+                    $(this).stop().animate({
+                        width: d,
+                        height: d,
+                        left: x,
+                        top: y
+                    }, t);
+                });
+                if (container.num !== undefined) {
+                    $(bubbles[container.num]).children().stop().animate({
+                        opacity: 0
+                    }, t);
+                }
+                $(bubbles[num]).children().stop().animate({
+                    opacity: 1
+                }, t);
+                container.num = num;
+            }
+            bubbles.each(function() {
+                this.hitTest = function(x, y) {
+                    var r = this.offsetWidth / 2;
+                    var dx = this.offsetLeft + r - x;
+                    var dy = this.offsetTop + r - y;
+                    return (dx * dx + dy * dy < r * r);
+                }
+                var pr = subr / d1 * 100;
+                var pd = subd / d1 * 100;
+                $(this).children().each(function(i) {
+                    var x = pr * Math.cos(subf + subdf * i) + 50 - pd / 2;
+                    var y = -pr * Math.sin(subf + subdf * i) + 50 - pd / 2;
+                    $(this).css({
+                        width: pd + "%",
+                        height: pd + "%",
+                        top: y + "%",
+                        left: x + "%"
+                    });
+                });
+            });
+            container.click(function(e) {
+
+                var offset = container.offset();
+                var x = e.pageX - offset.left;
+                var y = e.pageY - offset.top;
+                var i;
+                for (i = bubbles.length - 1; i >= 0; i--) {
+
+                    if (bubbles[i].hitTest(x, y)) {
+                        if (i === container.num) {
+                        } else {
+                            container.select(i);
+                        }
+                        return;
+                    }
+                }
+            });
+            container.css({
+                width: xindent + d1 + "px",
+                height: height + "px"
+            });
+            bubbles.children().css({
+                opacity: 0
+            });
+            container.select();
+        });
+
+    </script>
+
+    
+
+    <script type="text/javascript">
+        function ShowPage(vTabType) {
+
+            switch (vTabType) {
+
+                case 1:
+                    document.getElementById('<%#iframeProfile.ClientID %>').src = "Notes.aspx";
+                    document.getElementById("dvnotes").className = "nav_list_miss sel_miss";
+                        document.getElementById("dvJournal").className = "nav_list_miss ";
+                    document.getElementById("dvinspirators").className = "nav_list_miss";
+                    document.getElementById("dvmissions").className = "nav_list_miss";
+                    document.getElementById("dvLog").className = "nav_list_miss";
+                    document.getElementById("dvProgress").className = "nav_list_miss";
+                    document.getElementById("dvInviteMembers").className = "nav_list_miss";
+                  
+                    break;
+
+                case 2:
+                    document.getElementById('<%#iframeProfile.ClientID %>').src = "Inspirators.aspx";
+                                  document.getElementById("dvJournal").className = "nav_list_miss ";
+                    document.getElementById("dvinspirators").className = "nav_list_miss sel_miss";
+                    document.getElementById("dvnotes").className = "nav_list_miss";
+                    document.getElementById("dvmissions").className = "nav_list_miss";
+                    document.getElementById("dvLog").className = "nav_list_miss";
+                    document.getElementById("dvProgress").className = "nav_list_miss";
+                    document.getElementById("dvInviteMembers").className = "nav_list_miss";
+        
+                    break;
+                case 3:
+                    document.getElementById('<%#iframeProfile.ClientID %>').src = "Missions.aspx";
+                                 document.getElementById("dvJournal").className = "nav_list_miss ";
+                    document.getElementById("dvmissions").className = "nav_list_miss sel_miss";
+                    document.getElementById("dvnotes").className = "nav_list_miss";
+                    document.getElementById("dvinspirators").className = "nav_list_miss";
+                    document.getElementById("dvLog").className = "nav_list_miss";
+                    document.getElementById("dvProgress").className = "nav_list_miss";
+                    document.getElementById("dvInviteMembers").className = "nav_list_miss";
+         
+                    break;
+                case 4:
+                    document.getElementById('<%#iframeProfile.ClientID %>').src = "PendingFriendRequests.aspx";
+                               document.getElementById("dvJournal").className = "nav_list_miss ";
+                    document.getElementById("dvmissions").className = "nav_list_miss";
+                    document.getElementById("dvnotes").className = "nav_list_miss";
+                    document.getElementById("dvinspirators").className = "nav_list_miss";
+                    document.getElementById("dvLog").className = "nav_list_miss";
+                    document.getElementById("dvProgress").className = "nav_list_miss";
+                    document.getElementById("dvInviteMembers").className = "nav_list_miss";
+           
+                    break;
+                case 5:
+
+                    document.getElementById('<%#iframeProfile.ClientID %>').src = "AdminMessagesFront.aspx";
+                     document.getElementById("dvJournal").className = "nav_list_miss ";
+                    document.getElementById("dvmissions").className = "nav_list_miss";
+                    document.getElementById("dvnotes").className = "nav_list_miss";
+                    document.getElementById("dvinspirators").className = "nav_list_miss";
+                    document.getElementById("dvLog").className = "nav_list_miss";
+                    document.getElementById("dvProgress").className = "nav_list_miss";
+                    document.getElementById("dvInviteMembers").className = "nav_list_miss";
+ 
+                    break;
+                case 6:
+
+                    document.getElementById('<%#iframeProfile.ClientID %>').src = "FeedBackAndProblem.aspx";
+                      document.getElementById("dvJournal").className = "nav_list_miss ";
+                    document.getElementById("dvmissions").className = "nav_list_miss";
+                    document.getElementById("dvnotes").className = "nav_list_miss";
+                    document.getElementById("dvinspirators").className = "nav_list_miss";
+                    document.getElementById("dvLog").className = "nav_list_miss";
+                    document.getElementById("dvProgress").className = "nav_list_miss";
+                    document.getElementById("dvInviteMembers").className = "nav_list_miss";
+
+                    break;
+
+                case 7:
+
+                    document.getElementById('<%#iframeProfile.ClientID %>').src = "FitBitAccountSettings.aspx?ToSettings=true";
+                     document.getElementById("dvJournal").className = "nav_list_miss ";
+                    document.getElementById("dvmissions").className = "nav_list_miss";
+                    document.getElementById("dvnotes").className = "nav_list_miss";
+                    document.getElementById("dvinspirators").className = "nav_list_miss";
+                    document.getElementById("dvLog").className = "nav_list_miss";
+                    document.getElementById("dvInviteMembers").className = "nav_list_miss";
+
+                    break;
+                case 8:
+
+                    document.getElementById('<%#iframeProfile.ClientID %>').src = "Log.aspx";
+                      document.getElementById("dvJournal").className = "nav_list_miss ";
+                    document.getElementById("dvmissions").className = "nav_list_miss";
+                    document.getElementById("dvnotes").className = "nav_list_miss";
+                    document.getElementById("dvinspirators").className = "nav_list_miss";
+                    document.getElementById("dvLog").className = "nav_list_miss sel_miss";
+                    document.getElementById("dvProgress").className = "nav_list_miss";
+                    document.getElementById("dvInviteMembers").className = "nav_list_miss";
+
+                    break;
+                case 9:
+
+                    document.getElementById('<%#iframeProfile.ClientID %>').src = "PublicCircles.aspx";
+                      document.getElementById("dvJournal").className = "nav_list_miss ";
+                    document.getElementById("dvmissions").className = "nav_list_miss";
+                    document.getElementById("dvnotes").className = "nav_list_miss";
+                    document.getElementById("dvinspirators").className = "nav_list_miss";
+                    document.getElementById("dvLog").className = "nav_list_miss";
+                    document.getElementById("dvProgress").className = "nav_list_miss";
+                    document.getElementById("dvInviteMembers").className = "nav_list_miss";
+
+                    break;
+                case 10:
+
+                    document.getElementById('<%#iframeProfile.ClientID %>').src = "MyProfile.aspx";
+                      document.getElementById("dvJournal").className = "nav_list_miss ";
+                    document.getElementById("dvmissions").className = "nav_list_miss";
+                    document.getElementById("dvnotes").className = "nav_list_miss";
+                    document.getElementById("dvinspirators").className = "nav_list_miss";
+                    document.getElementById("dvLog").className = "nav_list_miss";
+                    document.getElementById("dvProgress").className = "nav_list_miss";
+                    document.getElementById("dvInviteMembers").className = "nav_list_miss";
+
+                    break;
+                case 11:
+
+                    document.getElementById('<%#iframeProfile.ClientID %>').src = "TermsAndConditions.aspx";
+                      document.getElementById("dvJournal").className = "nav_list_miss ";
+                    document.getElementById("dvmissions").className = "nav_list_miss";
+                    document.getElementById("dvnotes").className = "nav_list_miss";
+                    document.getElementById("dvinspirators").className = "nav_list_miss";
+                    document.getElementById("dvLog").className = "nav_list_miss";
+                    document.getElementById("dvProgress").className = "nav_list_miss";
+                    document.getElementById("dvInviteMembers").className = "nav_list_miss";
+
+                    break;
+                case 12:
+
+                    document.getElementById('<%#iframeProfile.ClientID %>').src = "PrivacyAndPolicy.aspx";
+                      document.getElementById("dvJournal").className = "nav_list_miss ";
+                    document.getElementById("dvmissions").className = "nav_list_miss";
+                    document.getElementById("dvnotes").className = "nav_list_miss";
+                    document.getElementById("dvinspirators").className = "nav_list_miss";
+                    document.getElementById("dvLog").className = "nav_list_miss";
+                    document.getElementById("dvProgress").className = "nav_list_miss";
+                    document.getElementById("dvInviteMembers").className = "nav_list_miss";
+
+                    break;
+
+                case 13:
+
+                    document.getElementById('<%#iframeProfile.ClientID %>').src = "Progress.aspx";
+                     document.getElementById("dvJournal").className = "nav_list_miss ";
+                    document.getElementById("dvmissions").className = "nav_list_miss";
+                    document.getElementById("dvnotes").className = "nav_list_miss";
+                    document.getElementById("dvinspirators").className = "nav_list_miss";
+                    document.getElementById("dvLog").className = "nav_list_miss";
+                    document.getElementById("dvProgress").className = "nav_list_miss sel_miss";
+                    document.getElementById("dvInviteMembers").className = "nav_list_miss";
+ 
+                    break;
+               case 14:
+
+                    document.getElementById('<%#iframeProfile.ClientID %>').src = "Notifications.aspx";
+                      document.getElementById("dvJournal").className = "nav_list_miss ";
+                    document.getElementById("dvmissions").className = "nav_list_miss";
+                    document.getElementById("dvnotes").className = "nav_list_miss";
+                    document.getElementById("dvinspirators").className = "nav_list_miss";
+                    document.getElementById("dvLog").className = "nav_list_miss";
+                    document.getElementById("dvProgress").className = "nav_list_miss";
+                    document.getElementById("dvInviteMembers").className = "nav_list_miss";
+
+                    break;
+                 case 15:
+
+                    document.getElementById('<%#iframeProfile.ClientID %>').src = "Support.aspx";
+                      document.getElementById("dvJournal").className = "nav_list_miss ";
+                    document.getElementById("dvmissions").className = "nav_list_miss";
+                    document.getElementById("dvnotes").className = "nav_list_miss";
+                    document.getElementById("dvinspirators").className = "nav_list_miss";
+                    document.getElementById("dvLog").className = "nav_list_miss";
+                    document.getElementById("dvProgress").className = "nav_list_miss";
+                    document.getElementById("dvInviteMembers").className = "nav_list_miss";
+                   
+
+                    break;
+                       case 16:
+
+                    document.getElementById('<%#iframeProfile.ClientID %>').src = "Journal.aspx";
+                    document.getElementById("dvJournal").className ="nav_list_miss sel_miss";
+                    document.getElementById("dvmissions").className = "nav_list_miss";
+                    document.getElementById("dvnotes").className = "nav_list_miss";
+                    document.getElementById("dvinspirators").className = "nav_list_miss";
+                    document.getElementById("dvLog").className = "nav_list_miss";
+                    document.getElementById("dvProgress").className = "nav_list_miss ";
+                    document.getElementById("dvInviteMembers").className = "nav_list_miss";
+                     
+
+                    break;
+                default:
+                    document.getElementById('<%#iframeProfile.ClientID %>').src = "Wall.aspx";
+                    document.getElementById("dvnotes").className = "nav_list_miss sel_miss";
+            }
+
+            return false;
+        }
+        
+    </script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+
+            $(".slidingDiv").hide();
+            $(".show_hide").show();
+
+            $('.show_hide').click(function() {
+                $(".slidingDiv").slideToggle();
+                $(".slidingDiv").show();
+
+            });
+
+        });
+ 
+    </script>
+<style type="text/css">
+.gray-bar{
+	border:1px solid #E5E5E5;
+	background:#EFEFEF;
+}
+.gray-head-heading{
+	background:#52aeaf;
+	padding:10px;
+	color:#fff;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:15px;
+	width:10%;
+	float:left;
+	text-align:center;
+}
+.gray-right-text{
+	color:#000;
+	float:left;
+	font-size:14px;
+	padding:10px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+</style>
+
+<%--Ticker--%>
+	<link href="../styles/ticker-style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script> 
+	<script src="../includes/jquery.ticker.js" type="text/javascript"></script>
+	<script src="../includes/site.js" type="text/javascript"></script>
+	<script type="text/javascript">
+    $(function () {
+        $('#js-news').ticker();
+    });
+</script>
+  
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="masterbody" runat="server">
+    <form id="form1" runat="server" autocomplete="off">
+    <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+    </asp:ToolkitScriptManager>
+    <div class="header_miss">
+    
+	
+        <div class='popupWeight' runat="server" id="popUpWeightAsk" style="display: none;">
+            <div class='cntWeight'>
+                <img style="margin-left: -71px; position: absolute; margin-top: -69px;" src="../images/icon_popup.png" />
+                <p>
+                    <span style="font-size: 20px; font-family: Arial;">Welcome to VITALITY</span>
+                    <br />
+                    <br />
+                    <span style="font-size: 18px; font-family: Arial;">Hi, its time for your weekly weigh-in.
+                        Let's keep our numbers accurate so we can get healthy and live a long and happy
+                        life. What's your weight today? </span>
+                    <br />
+                    <br />
+                    <span style="float: left; font-family: Arial; font-size: 14px;"></span>
+                    <br />
+                    Weight :
+                    <asp:TextBox ID="txtWeight" runat="server" CssClass="box_height" MaxLength="3"></asp:TextBox>
+                    <asp:FilteredTextBoxExtender ID="FilteredTextBoxExtender2" runat="server" TargetControlID="txtWeight"
+                        FilterType="Custom" ValidChars="0123456789.">
+                    </asp:FilteredTextBoxExtender>
+                    <asp:DropDownList ID="DrpWeightUnit" runat="server" CssClass="select_profile_weight"
+                        AppendDataBoundItems="false">
+                        <asp:ListItem Text="Select" Value="0"></asp:ListItem>
+                        <asp:ListItem Text="Kg" Value="1"></asp:ListItem>
+                        <asp:ListItem Text="lbs" Value="2"></asp:ListItem>
+                    </asp:DropDownList>
+                    <asp:RequiredFieldValidator ID="reqdWeight" runat="server" Style="color: #FF0000;
+                        display: inline; float: left; font-family: arial; font-size: 13px; margin-left: 201px;
+                        margin-top: -20px;" ErrorMessage="Weight & Units are required !" Display="Dynamic"
+                        ControlToValidate="txtWeight" ValidationGroup="weightValidations"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="reqdWeightUnits" runat="server" InitialValue="0"
+                        Style="color: #FF0000; display: inline; float: left; font-family: arial; font-size: 13px;
+                        margin-left: 201px; margin-top: -20px;" Display="Dynamic" ControlToValidate="DrpWeightUnit"
+                        ErrorMessage="Weight & Units are required !" ValidationGroup="weightValidations"></asp:RequiredFieldValidator>
+                    <br />
+                    <asp:Button ID="btnAddWeight" runat="server" Text="Submit" OnClick="btnAddWeight_Click"
+                        CssClass="post" ValidationGroup="weightValidations" OnClientClick="ShowWeightAddedMsg();" />
+                    <asp:LinkButton ID="LinkButton1" Text="Ok, I'm Ready" runat="server" Visible="false"></asp:LinkButton>
+                    <span id="spMsgAskWeight" runat="server" style="color: #FF0000; float: left; font-family: Arial;
+                        font-size: 12px; margin-bottom: 52px; margin-left: 11px; margin-top: 34px; display: none;">
+                    </span>
+                </p>
+            </div>
+        </div>
+        <%-- Person. TEST  Begins --%>
+        <div style="position: absolute;">
+            <asp:ModalPopupExtender ID="mdlPopUpAskWeight" runat="server" TargetControlID="LinkButton1"
+                PopupControlID="popUpWeightAsk" DropShadow="false" CancelControlID="btnAddWeight">
+            </asp:ModalPopupExtender>
+        </div>
+        <%--Personalization start--%>
+        <div class='popup' runat="server" id="popPersonalization">
+            <div class='cnt223'>
+                <img src='http://www.developertips.net/demos/popup-dialog/img/x.png' alt='quit' class='x'
+                    id='x' />
+                <img style="margin-left: -52px; position: absolute;" src="../images/icon_popup.png" />
+                <p>
+                    <span style="font-size: 20px; font-family: Arial;">Welcome to VITALITY</span>
+                    <br />
+                    <br />
+                    <span style="font-size: 18px; font-family: Arial;">"Healthier Together". </span>
+                    <br />
+                    <br />
+                    <span style="float: left; font-family: Arial; font-size: 14px;">We'll love to get to
+                        know you a little better. Would you be interested in taking a quick personality
+                        test ? </span><a href='' class='close'>May Be Later</a>
+                    <asp:LinkButton ID="lnkStartTest" Text="Ok, I'm Ready" runat="server"></asp:LinkButton>
+                </p>
+            </div>
+        </div>
+        <div class='popup_thanks' id="dvThanksPersonalization" runat="server" style="display: none;">
+            <div class='cnt223'>
+                <img style="cursor: pointer; margin-left: 370px; margin-top: -24px; position: absolute;"
+                    src='http://www.developertips.net/demos/popup-dialog/img/x.png' alt='quit' class='close_thanksPopUp'
+                    id='Img3' />
+                <img style="margin-left: -52px; position: absolute;" src="../images/icon_popup.png" />
+                <p style="font-family: Arial; font-size: 18px; margin-left: 33px; margin-top: 15px;">
+                    "Thank you for your submission."
+                </p>
+            </div>
+        </div>
+        <%--Personalization End--%>
+        <%-- Person. TEST  Begins --%>
+        <div style="position: absolute;">
+            <asp:ModalPopupExtender ID="MdlPersonlization" runat="server" TargetControlID="lnkStartTest"
+                PopupControlID="pnlPersonlization" DropShadow="false" CancelControlID="btnPersonlizationClose">
+            </asp:ModalPopupExtender>
+        </div>
+        <%-- Person. TEST  Ends --%>
+        <div class="main_miss">
+            <asp:LinkButton ID="lkhomelogo" runat="server" OnClick="lkhomelogo_Click">
+            <div class="logo_miss" style=" width: 169px !important;">
+            </div>
+            </asp:LinkButton>
+            <div class="righttop_miss">
+                <%--Logout--%>
+                <asp:LinkButton ID="lnkLogOut" runat="server" Text="Log Out" OnClick="lnkLogOut_Click"
+                    ToolTip="Logout"> 
+                <div class="log_miss"></div>
+                
+                </asp:LinkButton>
+                <div class="sep_miss">
+                </div>
+                <div class="setting_miss">
+                    <a id="lkSettings" href="#" onclick="ShowPage(6);" title="Settings">
+                        <img src="../images/mission_settings.png" style="height: 22px; width: 24px" />
+                    </a>
+                </div>
+                <div class="sep_miss">
+                </div>
+                <a id="lnkNotification" href="#" onclick="ShowPage(14);" title="Notifications">
+                    <div class="Notification_miss">
+                        <div id="DivNitification" runat="server" style="display: none; background-color: #D44937;
+                            color: white; text-align: center; margin-left: 14px; margin-top: -8px; padding: 2px;
+                            width: 12px;">
+                            <asp:Label ID="lbNMINotification" runat="server" Text="" Style="font-size: 11px;
+                                text-align: center; font-family: Arial;" ToolTip="Notifications"></asp:Label>
+                        </div>
+                    </div>
+                    <%--  <img src="../images/notifocation.png" style="height: 22px; width: 24px" />--%>
+                </a>
+                <div class="sep_miss">
+                </div>
+                <%--<div class="pop_up_miss"></div>--%>
+                <a id="lkMessages" href="#" onclick="ShowPage(5);" title="Messages">
+                    <div class="msg_miss">
+                        <div id="divnoti" runat="server" style="display: none; background-color: #D44937;
+                            color: white; text-align: center; margin-left: 18px; margin-top: -8px; padding: 2px;
+                            width: 12px;">
+                            <asp:Label ID="lbnotification" runat="server" Text="" Style="font-size: 11px; text-align: center;
+                                font-family: Arial;" ToolTip="Notifications"></asp:Label>
+                        </div>
+                        <%-- <img src="../images/mission_mail.png" style="margin-top: -14px;" />--%>
+                    </div>
+                </a>
+                <div class="sep_miss">
+                </div>
+                <a id="A3" href="#" onclick="ShowPage(7);" title="Tracker">
+                    <div class="pc_miss" style="margin-left: 10px;">
+                        <div id="div1" runat="server" style="display: none; background-color: #D44937; color: white;
+                            text-align: center; margin-left: 18px; margin-top: -8px; padding: 2px; width: 12px;">
+                            <asp:Label ID="Label3" runat="server" Text="" Style="font-size: 11px; text-align: center;"
+                                ToolTip="FitBit Account Settings"></asp:Label>
+                        </div>
+                        <%-- <img src="../images/mission_mail.png" style="margin-top: -14px;" />--%>
+                    </div>
+                </a>
+                <%--Logged In User--%>
+                <div class="drop_miss" style="float: right;">
+                    <asp:Label ID="lblWelcomeUser" runat="server" Style="font-weight: bold; color: white;
+                        font-size: 13px;"></asp:Label>
+                </div>
+                <div style="float: left; float: right; margin: -5px 10px 0px 10px;">
+                    <a id="A1" href="#" runat="server" onclick="ShowPage(10);">
+                        <asp:Image ID="imgprofile" runat="server" ToolTip="My Profile" Height="35px" Width="35px"
+                            Style="cursor: pointer;" />
+                    </a>
+                </div>
+            </div>
+       
+            <div class="head_btm_miss">
+                <iframe id="iframeselcircle" runat="server" width="700px" scrolling="no" style="overflow: hidden;
+                    height: 71px"></iframe>
+                     <div style=" float: left;
+    margin-left: -64px;
+    margin-top: -31px;
+    padding-top: 0;" align="left" id="dvpendinginvitaionmsg"
+            runat="server">
+            <a href="#" onclick="ShowPage(4)">
+                <div style=" background: none repeat scroll 0 0 #FFD2D3;
+    border: 1px solid #DF8F90;
+    border-radius: 5px 5px 5px 5px;
+    float: left;
+    font-family: arial;
+    margin-top: 31px;
+    width: auto;">
+                    <img style="float: left;" src="../images/notification.png">
+                    <div style=" background: none repeat scroll 0 0 #D44937;
+    border-radius: 8px 8px 8px 8px;
+    color: #FFFFFF;
+    float: left;
+    height: 20px;
+    margin-left: 4px;
+    padding: 8px 0 0 12px;
+    position: absolute;
+    width: 21px;">
+                        <asp:Label ID="lbpendinginvitations" runat="server"></asp:Label>
+                    </div>
+                    <asp:Label ID="lbpendinginvmsg" runat="server" Style="   color: #871414;
+    float: left;
+    font-family: arial;
+    font-size: 14px;
+    font-weight: bold;
+    height: 0;
+    margin-bottom: 14px;
+    padding: 8px 6px 3px;
+    width: auto;"></asp:Label>
+                </div>
+            </a>
+          
+        </div>
+                   
+                <div style="float: right;">
+                    <div id="dvserchfrds" runat="server" style="float: left !important; height: 44px !important;
+                        margin-right: 130px; margin-top: -4px;">
+                        <ucSearchFriends:Form ID="seacrhfriend" runat="server" style="display: none;" />
+                    </div>
+                    <div style="float: right;">
+                        <a href="#" class="show_hide">
+                            <img id="img" runat="server" style="border-width: 0; float: right; margin-left: 62px;
+                                margin-right: 4px; margin-top: -6px;" src="../images/invite_thru_email_icon.png" /></a>
+                    </div>
+                </div>
+                <div id="DivEmail" runat="server" class="slidingDiv" style="border: 1px solid #ACB4C7;
+                    display: none; float: right; height: 130px; margin-left: 716px; margin-right: 92px;
+                    margin-top: -30px; position: absolute; width: 234px;">
+                    <a id="a2" runat="server" onclick="Close()">
+                        <img id="Img1" src="../images/close_btn.png" runat="server" style="border-width: 0;
+                            float: right; margin-right: -19px; margin-top: -17px;" /></a>
+                    <%--<asp:ImageButton ID="imgCloseBtn" runat="server" ImageUrl="~/images/close_btn.png" style="  border-width: 0;
+    float: right;
+    margin-right: -19px;
+    margin-top: -17px;" OnClientClick="Close()"  />--%>
+                    <span style="float: left; font-family: arial; color: #63697C; font-size: 13px; margin-right: 23px;
+                        margin-top: 5px;">Email:</span>
+                    <asp:TextBox ID="txtEmail" runat="server" Style="border: 1px solid #BBC0D4; float: left;
+                        height: 24px; width: 172px;"></asp:TextBox>
+                    <br />
+                    <div>
+                        <span id="SpanEmail" runat="server" style="float: left; color: Red; font-family: arial;
+                            font-size: 13px; margin-left: 64px;"></span>
+                        <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtEmail"
+                        Display="Dynamic" ErrorMessage="Email required" ValidationGroup="a" Style="margin-left: 38px;"></asp:RequiredFieldValidator>--%>
+                        <asp:RegularExpressionValidator ID="regEmail" runat="server" ControlToValidate="txtEmail"
+                            Style="margin-left: 58px; font-family: arial; font-size: 13px;" ValidationGroup="a"
+                            Display="Dynamic" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
+                            ErrorMessage="Valid email required"></asp:RegularExpressionValidator>
+                    </div>
+                    <br />
+                    <div style="float: left;">
+                        <span id="spanMsg" runat="server" style="color: rgb(99, 105, 124); float: left; font-family: arial;
+                            font-size: 13px; margin-top: 26px; margin-left: 1px; width: 60px;">Message:</span>
+                        <asp:TextBox ID="txtmessage" runat="server" TextMode="MultiLine" Style="border: 1px solid rgb(187, 192, 212);
+                            float: left; height: 44px; margin-left: 0px; margin-top: 12px; width: 167px"></asp:TextBox>
+                        <br />
+                    </div>
+                    <span id="SpanInvite" runat="server" class="classme" style="background-color: #0C7A75 !important;
+                        border-radius: 5px 5px 5px 5px; color: #FFFFFF; float: left; font-family: arial;
+                        font-size: 15px; height: 20px; margin-left: 145px; margin-top: 10px; padding-left: 28px;
+                        padding-top: 2px; text-decoration: none; width: 60px;"><a id="at" href="#" runat="server"
+                            class="classme" style="color: #FFFFFF; text-decoration: none;">Invite</a></span>
+                    <%-- <asp:Button ID="btnSend" runat="server" Text="Invite" ValidationGroup="a" Style="background-color: #0C7A75;
+                        border-radius: 5px 5px 5px 5px; color: #FFFFFF; float: right; height: 28px; margin-top: 7px;
+                        padding-top: 0; width: 64px;" OnClientClick="sendmail();"  />--%>
+                    <br />
+                    <span id="spBlankEmailMsg" runat="server" style="color: red; float: left; font-family: arial;
+                        font-size: 13px; margin-left: 65px; margin-top: 6px;"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="main_section">
+        <%-- <div style="padding-bottom: 20px; font-size: 18px; font-weight: bold;">
+           
+        </div>--%>
+        <div class="left_section_mission">
+            <%--Circles Start--%>
+            <asp:Label ID="lblinksel" runat="server" Style="display: none"></asp:Label>
+            <asp:UpdatePanel ID="udpOutterUpdatePanel" runat="server" UpdateMode="Conditional">
+                <ContentTemplate>
+                    <asp:Panel ID="pnlPersonlization" runat="server" CssClass="inner_box_pop_up_favourites"
+                        Style="background: none repeat scroll 0 0 #FFFFFF; border: 5px solid #444444;
+                        border-radius: 10px 10px 10px 10px; box-shadow: 2px 5px 4px #444444; float: left !important;
+                        height: 380px !important; margin: -70px auto 2px 74px !important; width: 790px !important;
+                        display: none;">
+                        <table>
+                            <tr>
+                                <td align="right">
+                                    <a class='Close_PopUp'>
+                                        <asp:Button ID="btnPersonlizationClose" runat="server" Text="X" CssClass="close_img_pop_up"
+                                            Style="background: none repeat scroll 0 0 #000000; border: medium none navy;
+                                            border-radius: 30px 30px 30px 30px; color: #FFFFFF; float: right; font-family: arial;
+                                            font-size: 17px; margin-left: -9px; margin-top: -17px; padding: 2px !important;
+                                            position: absolute; width: 28px !important;" />
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="gray_bg_favourties" style="float: left;">
+                                        <span style="float: left; font-family: Arial; font-weight: bold; font-size: 16px;
+                                            margin: 10px; color: Gray;">Super! Thanks for helping us out!</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: #ffffff; border: 0px solid; color: grey; font-size: 17px;
+                                    margin: 0px; padding: 0 3px 1px 11px;">
+                                    <span>Below you'll see some images. Pick just one that you best represents a <b>great
+                                        day</b> </span>:
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="inner_heading_favourites" style="float: left !important; margin-left: 0px;">
+                                        <asp:DataList ID="dtPersonlizationImages" runat="server" RepeatColumns="5" RepeatDirection="Horizontal"
+                                            RepeatLayout="Table">
+                                            <ItemTemplate>
+                                                <table cellpadding="5" cellspacing="5">
+                                                    <tr>
+                                                        <td bordercolor="gray">
+                                                            <img onclick='<%# "SelectSingleRadiobutton(" + Eval("pk_tblPersonalization_types_Images_Id") + ");" %>'
+                                                                alt="rishi" runat="server" id="ri" src='<%#"~/User/PersonalizationImages/" +Eval("personalization_Type_Image") %>'
+                                                                style="border: 4px solid #BBBBBB; margin: 10px; border-radius: 5px 5px 5px 5px;
+                                                                cursor: pointer;" height="120" width="130" />
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </ItemTemplate>
+                                        </asp:DataList>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </asp:Panel>
+                    <div style="width: 80%" id="bubbles">
+                        <asp:HiddenField ID="lblMessage" runat="server" />
+                        <asp:Repeater ID="repCircles" runat="server" OnItemDataBound="repCircles_ItemDataBound"
+                            OnItemCommand="repCircles_ItemCommand">
+                            <ItemTemplate>
+                                <%--<div id="bubbles">--%>
+                                <div id="dvcirclecolor" runat="server" onclick="return circleselection(this,event);">
+                                    <asp:HiddenField ID="repid" runat="server" Value='<%# Container.ItemIndex + 1 %>' />
+                                    <asp:HiddenField ID="hndUserId" runat="server" Value='<%#Eval("fk_user_registration_Id")%>' />
+                                    <asp:HiddenField ID="hndCircleId" runat="server" Value='<%#Eval("fk_circle_id")%>' />
+                                    <asp:HiddenField ID="hdnIID" runat="server" />
+                                    <asp:HiddenField ID="hdnPermission" runat="server" />
+                                    <asp:HiddenField ID="hnducId" runat="server" Value='<%#Eval("pk_user_circle_id")%>' />
+                                    <asp:HiddenField ID="hndCName" runat="server" Value='<%#Eval("circle_name")%>' />
+                                    <asp:HiddenField ID="hndcolor" runat="server" Value='<%#Eval("circle_color")%>' />
+                                    <asp:HiddenField ID="hndloginid" runat="server" Value='<%#Eval("LoginId")%>' />
+                                    <div data-href="face" id="dv1img" runat="server">
+                                    </div>
+                                    <div data-href="face" id="dv2img" runat="server">
+                                    </div>
+                                    <div data-href="face" id="dv3img" runat="server">
+                                    </div>
+                                    <div data-href="face" id="dv4img" runat="server">
+                                    </div>
+                                    <div data-href="face" id="dv5img" runat="server">
+                                    </div>
+                                    <div class="info-container">
+                                        <span title='Members'><a id="lkfriendscount" runat="server" href="#">
+                                            <asp:Label ID="lbmembercount" runat="server"></asp:Label>
+                                        </a></span>&nbsp;| <span title='Missions'><a id="lkmissioncount" runat="server" href="#"
+                                            onclick="GetMissionList();">
+                                            <asp:Label ID="lbmissioncount" runat="server"></asp:Label>
+                                        </a>
+                                            <%--                                            <asp:LinkButton ID="lkmissioncount" runat="server" CommandName="ShowSelectedCircleMissions"
+                                                CommandArgument='<%#Eval("fk_circle_id")+ "," + Eval("fk_user_registration_Id") %>'></asp:LinkButton>
+--%>
+                                        </span>
+                                        <p style="color: #000000; font-size: 13px; margin-left: -3px; padding-top: 6px; text-align: center;
+                                            width: 81px; word-wrap: break-word;">
+                                            <%#Eval("circle_name")%></p>
+                                    </div>
+                                    <asp:LinkButton ID="lnkChangeCircle" runat="server" CommandName="ShowForSelectedCircle"
+                                        CommandArgument='<%#Eval("fk_circle_id")+ "," + Eval("fk_user_registration_Id") %>'>
+                                    </asp:LinkButton>
+                                </div>
+                                <%--</div>--%>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </div>
+                </ContentTemplate>
+                <Triggers>
+                    <asp:AsyncPostBackTrigger ControlID="repCircles" />
+                </Triggers>
+                <%-- <Triggers>
+                    <asp:AsyncPostBackTrigger ControlID="lkselectcircle" />
+                </Triggers>--%>
+            </asp:UpdatePanel>
+            <%--Circles End--%>
+            <div>
+                <%--Add New Circle Start--%>
+                <%--                <asp:LinkButton ID="lkAllCircles" runat="server" Style="font-size: 12px; padding-left: 32px"
+                    PostBackUrl="~/User/MemberList.aspx?circles=all">View All Circles</asp:LinkButton>--%>
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+                        <%-- <div>
+                        <asp:LinkButton ID="lkViewallCircles" runat="server">View All Circles</asp:LinkButton>
+                    </div>--%>
+                        <div style="width: 46%; padding-top: 20px" align="right">
+                            <asp:ImageButton ID="imgaddcircle" runat="server" ImageUrl="~/images/AddCircle.png"
+                                ToolTip="Add New Circle" />
+                            <asp:Panel ID="PnlCircle" runat="server" Style="display: none" CssClass="main_pop_up_box_miss">
+                                <div class="inner_box_pop_up">
+                                    <div class="close_img_pop_up">
+                                        <asp:Image ID="ImgClose" Style="margin-left: -18px; margin-top: -25px;" runat="server"
+                                            ImageUrl="~/images/close_btn111.png" /></div>
+                                    <div class="heading_pop_up">
+                                        <span style="float: left; font-family: arial; font-size: 20px; margin-left: -340px;
+                                            margin-top: -5px;">Create a new Circle:</span> <span style="float: left; margin-left: -267px;
+                                                margin-top: 11px;">Customize your circle. Make it your own.</span>
+                                    </div>
+                                    </tr>
+                                    <div class="list_popup">
+                                        <span class="text_form_pop" style="float: left; margin-left: -133px !important; margin-right: 116px;">
+                                            Name: <span style="color: #FF0000">*</span></span> <span class="input_box">
+                                                <asp:TextBox ID="txtcirclename" runat="server" ValidationGroup="circle" MaxLength="20"
+                                                    TabIndex="1" OnTextChanged="txtcirclename_TextChanged" onkeypress="return handleEnter(event)"></asp:TextBox>
+                                                <asp:FilteredTextBoxExtender ID="FilteredTextBoxExtender1" runat="server" TargetControlID="txtcirclename"
+                                                    FilterType="Custom" ValidChars="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 "
+                                                    InvalidChars="~!@#$%^&*()_+`{}|:>';.,/\">
+                                                </asp:FilteredTextBoxExtender>
+                                                <br />
+                                                <asp:Label ID="lbCName" runat="server" Text="Circle name already exists." Visible="false"
+                                                    Style="float: left;"></asp:Label>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ValidationGroup="circle"
+                                                    Display="Dynamic" ErrorMessage="Circle name required" ControlToValidate="txtcirclename"
+                                                    Style="float: left; font-family: Arial; font-size: 12px; margin-left: 202px;
+                                                    margin-right: 45px;"></asp:RequiredFieldValidator>
+                                            </span>
+                                    </div>
+                                    <div class="list_popup">
+                                        <span class="text_form_pop" style="float: left; margin-left: -139px !important; margin-right: 123px;">
+                                            Color:<span style="color: #FF0000">
+                                                <asp:Label ID="Label1" runat="server" Text="*" Style="color: red"></asp:Label>
+                                            </span></span><span class="input_box">
+                                                <asp:ColorPickerExtender runat="server" ID="ColorPickerExtender1" TargetControlID="txtcirclecolor"
+                                                    OnClientColorSelectionChanged="colorChanged" />
+                                                <asp:TextBox ID="txtcirclecolor" runat="server" TabIndex="2" onkeypress="return handleEnter(event)"></asp:TextBox><br />
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ValidationGroup="circle"
+                                                    Display="Dynamic" ErrorMessage="Choose circle color" Style="float: left; font-family: Arial;
+                                                    font-size: 12px; margin-left: 202px; margin-right: 45px;" ControlToValidate="txtcirclecolor"></asp:RequiredFieldValidator>
+                                            </span>
+                                    </div>
+                                    <div style="height: 60px; width: 545px; float: left; margin-top: 18px;">
+                                        <span class="text_form_pop" style="float: left; margin-left: -67px !important; margin-right: 39px;">
+                                            Upload an image:<span style="color: #FF0000">*</span></span> <span class="input_box">
+                                                <asp:FileUpload ID="fucircleimage" runat="server" CssClass="browse" ValidationGroup="circle"
+                                                    TabIndex="3" onchange="getImg(this,100,'jpeg|png|jpg')" Style="width: 180px !important;" />
+                                                <br />
+                                                <br />
+                                                <span style="float: left; font-family: Arial; font-size: 12px; margin-left: 204px;
+                                                    margin-right: 45px; margin-top: -4px;">Max size: 1MB </span>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ValidationGroup="circle"
+                                                    Display="Dynamic" ErrorMessage="Upload circle image" Style="float: left; font-family: Arial;
+                                                    font-size: 12px; margin-left: 204px; margin-right: 45px; margin-top: -1px;" ControlToValidate="fucircleimage"></asp:RequiredFieldValidator>
+                                                <asp:Label ID="lbuploadimger" runat="server" Visible="false"></asp:Label>
+                                                <br />
+                                                <%-- <asp:CustomValidator ID="NewPasswordCustomValidator" runat="server" ToolTip="FileSize should not exceed 1MB"
+                                                    Style="float: left; font-family: Arial; font-size: 12px; margin-left: 204px;
+                                                    margin-right: 45px; margin-top: -4px;" ValidationGroup="circle" ErrorMessage="FileSize Exceeds the Limits."
+                                                    ControlToValidate="fucircleimage" ClientValidationFunction="checkfilesize"></asp:CustomValidator>--%>
+                                            </span>
+                                    </div>
+                                    <div class="list_popup">
+                                        <span class="text_form_pop" style="float: left; margin-left: -35px; margin-right: 21px;">
+                                            Set your Circle Specs.<span style="color: #FF0000">*</span></span> <span class="input_box">
+                                                <asp:DropDownList ID="ddlcirclespec" runat="server" AppendDataBoundItems="true" ValidationGroup="circle"
+                                                    TabIndex="4">
+                                                    <asp:ListItem Text="--Choose--" Value="0"></asp:ListItem>
+                                                </asp:DropDownList>
+                                                <br />
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" Display="Dynamic"
+                                                    ValidationGroup="circle" ErrorMessage="Choose circle specs" Style="float: left;
+                                                    font-size: 12px; font-family: Arial; margin-left: 204px; margin-right: 45px;"
+                                                    ControlToValidate="ddlcirclespec" InitialValue="0"></asp:RequiredFieldValidator>
+                                            </span>
+                                    </div>
+                                    <div class="list_popup">
+                                        <asp:Button ID="btncreatecircle" runat="server" CssClass="create" Text="Create" OnClientClick="return checkfilesize();"
+                                            OnClick="btncreatecircle_Click" ValidationGroup="circle" TabIndex="5" Style="clear: both;
+                                            float: left; font-size: 17px; height: 29px; margin-left: 182px; margin-top: 44px;
+                                            padding-bottom: 5px; width: 128px;" />
+                                    </div>
+                                </div>
+                            </asp:Panel>
+                            <asp:ModalPopupExtender ID="ModalPopupExtender2" runat="server" TargetControlID="imgaddcircle"
+                                PopupControlID="PnlCircle" BackgroundCssClass="modalBackground" DropShadow="false"
+                                CancelControlID="ImgClose">
+                            </asp:ModalPopupExtender>
+                            <asp:ImageButton ID="imgBtnCircleView" runat="server" ImageUrl="~/images/all_circle.png"
+                                ToolTip="View All Circles" OnClientClick="ShowPage(9);" Style="height: 40px;
+                                width: 40px;" />
+                        </div>
+                    </ContentTemplate>
+                    <Triggers>
+                        <asp:PostBackTrigger ControlID="btncreatecircle" />
+                    </Triggers>
+                </asp:UpdatePanel>
+                <%--Add New Circle End--%>
+            </div>
+        </div>
+        <!--center section start-->
+         <div id="DVAdminMessage" runat="server" style=" width: 970px;  margin-top: 26px;   float: left;">
+       <div class="gray-head-heading">Update</div>
+         <div class="gray-right-text" style=" height: 16px; background-color:#E5E5E5;">
+       <ul id="js-news">
+    <li class="news-item"><a href="#">This is the 1st latest news item.</a></li>
+    <li class="news-item"><a href="#">This is the 2nd latest news item.</a></li>
+    <li class="news-item"><a href="#">This is the 3rd latest news item.</a></li>
+    <li class="news-item"><a href="#">This is the 4th latest news item.</a></li>
+</ul>
+     
+    </div>
+        </div>
+        <%-- Search Members--%>
+        <div id="dvsearchmembers" runat="server">
+        </div>
+        <%-- Accept Member Invitations--%>
+        <div id="dvacceptInvitation" runat="server" visible="false">
+            <ucAcceptInvitation:Form ID="acceptinvitation" runat="server" />
+        </div>
+        <div id="DVJoin" runat="server" style="display: none; float: right; margin-right: 219px;">
+            <asp:Button ID="btnJoinPublicGroup" runat="server" Text="Join" OnClick="btnJoinPublicGroup_Click"
+                Style="background-color: #009999; border: medium none; border-radius: 5px 5px 5px 5px;
+                clear: both; color: #FFFFFF; font-family: arial; font-size: 15px; height: 29px;
+                margin-top: 8px; width: 61px;" />
+        </div>
+        <div id="dvJoinMsg" runat="server" style="display: none; color: gray; float: right;
+            margin-right: -95px; margin-top: 41px;">
+            <asp:Label ID="lbJoin" runat="server" Text="You will need approve all  requests before someone can join this circle"></asp:Label>
+        </div>
+        <div class="nav_miss">
+            <ul class="navi_miss">
+                <a href="#" onclick="ShowPage(1);">
+                    <li class="nav_list_miss sel_miss" id="dvnotes">Notes</li></a> <a href="#" onclick="ShowPage(2);">
+                        <li class="nav_list_miss" id="dvinspirators">inspirators</li></a> <a href="#" onclick="ShowPage(3);">
+                            <li class="nav_list_miss" id="dvmissions">missions </li>
+                        </a><a id="aLog" runat="server" href="#" onclick="ShowPage(8);">
+                            <li class="nav_list_miss" id="dvLog" style="cursor: pointer;">Log </li>
+                        </a><a id="aProgress" runat="server" href="#" onclick="ShowPage(13);">
+                            <li class="nav_list_miss" id="dvProgress" style="cursor: pointer;">Progress </li>
+                        </a>
+                        <a id="aJournal" runat="server" href="#" onclick="ShowPage(16);">
+                            <li class="nav_list_miss" id="dvJournal" style="cursor: pointer;">Journal </li>
+                        </a>
+                <%-- <li class="nav_list_miss">progress</li>--%>
+            </ul>
+        </div>
+        <div style="padding-top: 40px">
+            <%-- <a href="#" onclick="ShowPage(1);">
+                    <div class="mission_tab_num sel" id="dvnotes">
+                        Notes</div>
+                </a><a href="#" onclick="ShowPage(2);">
+                    <div class="mission_tab_num " id="dvinspirators">
+                        inspirators</div>
+                </a><a href="#" onclick="ShowPage(3);">
+                    <div class="mission_tab_num" id="dvmissions">
+                        missions</div>
+                </a><a href="#">
+                    <div class="mission_tab_num ">
+                        Progress</div>
+                </a><a href="#">
+                    <div class="mission_tab_num ">
+                        Journal</div>
+                </a>--%>
+        </div>
+        <div>
+            <div id="progressIndicator" class="progressIndicatorStyle">
+                <img id="Img2" src="../images/loader.gif" runat="server" />
+            </div>
+            <div id="dviframe" runat="server" style="float: left; width: 72%;">
+                <iframe id="iframeProfile" runat="server" width="101%" height="1180px" scrolling="no"
+                    allowtransparency="true"></iframe>
+            </div>
+            <a style="float: right;" target="_blank" href="http://www.shareasale.com/r.cfm?b=502920&u=853145&m=31379&urllink=&afftrack=">
+                <img style="border: 1px solid #CCCCCC; box-shadow: 1px 2px 6px 2px #CCCCCC;" src="http://www.shareasale.com/image/31379/One160x600.jpeg"
+                    alt="Fitbit One" border="0"></a>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    </div>
+    <div id="dvFooter" runat="server">
+        <div class="footer_miss">
+        </div>
+    </div>
+    <div class="copyrgts">
+        <div class="copy_right_left">
+            © 2011 Vitality
+        </div>
+        <div class="copy_right_rgt">
+            <a href="#" onclick="ShowPage(15);">|Support </a><a href="#" onclick="ShowPage(12);">
+                | Privacy Policy </a><a href="#" onclick="ShowPage(11);">Terms & Conditions
+            </a>
+        </div>
+    </form>
+</body>
+</html>

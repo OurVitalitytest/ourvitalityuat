@@ -1,0 +1,13 @@
+
+.privacy-tittle{font-family:arial;  font-size: 16px;color: #666666; margin:10px 0 10px 0; font-weight:bold;}
+.privacy-contant{ margin:0 auto; overflow:hidden;font-family: arial; width:92%;font-family:Myriad Pro; text-align:justify;
+    font-size: 12px; color:#5f6062;}
+.privacy-contant-img{ float:right;}
+.privacy-contant-sub_part{margin:0 auto; overflow:hidden; width:98%;}
+.privacy-post{ float:left; width:100%;  margin-left:21px; margin-top:15px;}
+.privacy-post-tittle{ text-align:center; width:100%;font-size: 16px;font-family: arial; font-weight:bold; color:#5f6062; margin-top:8px;}
+.privacy-post-tittle-img{ text-align:center; width:100%;}
+.privacy-post-description{width:100%;font-size: 12px; text-align:justify;font-family:arial; margin:20px 0 0 0;}
+.privacy-post-description-left{ float:left; width:30%;margin-left:9px;}
+.privacy-post-description-mid{float:left; width:30%;margin-left:21px;}
+.privacy-post-description-right{float:left; width:30%;margin-left:21px;}

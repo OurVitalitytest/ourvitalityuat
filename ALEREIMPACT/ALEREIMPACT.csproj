@@ -1,0 +1,2392 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6244445B-3FB7-4E7F-B04C-A5D590FA01AD}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ALEREIMPACT</RootNamespace>
+    <AssemblyName>ALEREIMPACT</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.5.7.123, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Abc\Desktop\bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ALEREIMPACT.BAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ALEREIMPACT.BAL\bin\Debug\ALEREIMPACT.BAL.dll</HintPath>
+    </Reference>
+    <Reference Include="ALEREIMPACT.DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ALEREIMPACT.DAL\bin\Debug\ALEREIMPACT.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="ALEREIMPACT.FRAMEWORK, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ALEREIMPACT.FRAMEWORK\bin\Debug\ALEREIMPACT.FRAMEWORK.dll</HintPath>
+    </Reference>
+    <Reference Include="ASPSnippets.FaceBookAPI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Alere Vitality BAckup\2 september 2013\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\ASPSnippets.FaceBookAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Alere Vitality BAckup\2 september 2013\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.DynamicProxy2, Version=2.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Alere Vitality BAckup\2 september 2013\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\Castle.DynamicProxy2.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.MicroKernel, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Alere Vitality BAckup\2 september 2013\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\Castle.MicroKernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Alere Vitality BAckup\2 september 2013\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="CKEditor.NET, Version=3.6.4.0, Culture=neutral, PublicKeyToken=e379cdf2f8354999, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Alere Vitality BAckup\2 september 2013\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\CKEditor.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonServiceLocator.WindsorAdapter, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Alere Vitality BAckup\2 september 2013\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\CommonServiceLocator.WindsorAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth, Version=4.0.0.11165, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Alere Vitality BAckup\2 september 2013\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\DotNetOpenAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah, Version=1.2.13605.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Alere Vitality BAckup\2 september 2013\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="FidbitAPI.DotNETClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Alere Vitality BAckup\2 september 2013\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\FidbitAPI.DotNETClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Alere Vitality BAckup\2 september 2013\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Alere Vitality BAckup\2 september 2013\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OAuth.Net.Common, Version=0.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Alere Vitality BAckup\2 september 2013\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\OAuth.Net.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="OAuth.Net.Components, Version=0.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Alere Vitality BAckup\2 september 2013\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\OAuth.Net.Components.dll</HintPath>
+    </Reference>
+    <Reference Include="OAuth.Net.Consumer, Version=0.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Alere Vitality BAckup\2 september 2013\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\OAuth.Net.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Alere Vitality BAckup\2 september 2013\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\System.Web.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DataVisualization.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Alere Vitality BAckup\2 september 2013\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\System.Web.DataVisualization.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="Login_old.aspx" />
+    <Content Include="Register1.aspx" />
+    <Content Include="RegisterProfile.aspx" />
+    <Content Include="User\CircleImages\1st_circle.png" />
+    <Content Include="User\CircleImages\2nd_circle.png" />
+    <Content Include="User\CircleImages\4th_circle.png" />
+    <Content Include="User\ucCircles.ascx" />
+    <Content Include="User\Wall.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminChangePassword.aspx.cs">
+      <DependentUpon>AdminChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminChangePassword.aspx.designer.cs">
+      <DependentUpon>AdminChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddFoodCategory.aspx.cs">
+      <DependentUpon>AddFoodCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddFoodCategory.aspx.designer.cs">
+      <DependentUpon>AddFoodCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminChangePassword.aspx.cs">
+      <DependentUpon>AdminChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminChangePassword.aspx.designer.cs">
+      <DependentUpon>AdminChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminDashboard.aspx.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminDashboard.aspx.designer.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminPanel.aspx.cs">
+      <DependentUpon>AdminPanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminPanel.aspx.designer.cs">
+      <DependentUpon>AdminPanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CircleManagement.aspx.cs">
+      <DependentUpon>CircleManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CircleManagement.aspx.designer.cs">
+      <DependentUpon>CircleManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CircleMissionDetail.aspx.cs">
+      <DependentUpon>CircleMissionDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CircleMissionDetail.aspx.designer.cs">
+      <DependentUpon>CircleMissionDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Circles.aspx.cs">
+      <DependentUpon>Circles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Circles.aspx.designer.cs">
+      <DependentUpon>Circles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ErrorTypeLog.aspx.cs">
+      <DependentUpon>ErrorTypeLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ErrorTypeLog.aspx.designer.cs">
+      <DependentUpon>ErrorTypeLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FeedBackMessage.aspx.cs">
+      <DependentUpon>FeedBackMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\FeedBackMessage.aspx.designer.cs">
+      <DependentUpon>FeedBackMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Flags.aspx.cs">
+      <DependentUpon>Flags.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Flags.aspx.designer.cs">
+      <DependentUpon>Flags.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\GlobalMessageDetail.aspx.cs">
+      <DependentUpon>GlobalMessageDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\GlobalMessageDetail.aspx.designer.cs">
+      <DependentUpon>GlobalMessageDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Group.aspx.cs">
+      <DependentUpon>Group.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Group.aspx.designer.cs">
+      <DependentUpon>Group.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\GroupDetail.aspx.cs">
+      <DependentUpon>GroupDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\GroupDetail.aspx.designer.cs">
+      <DependentUpon>GroupDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\GroupEmail.aspx.cs">
+      <DependentUpon>GroupEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\GroupEmail.aspx.designer.cs">
+      <DependentUpon>GroupEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\InspiratorCircleDetail.aspx.cs">
+      <DependentUpon>InspiratorCircleDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\InspiratorCircleDetail.aspx.designer.cs">
+      <DependentUpon>InspiratorCircleDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Inspiratorcomment.aspx.cs">
+      <DependentUpon>Inspiratorcomment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Inspiratorcomment.aspx.designer.cs">
+      <DependentUpon>Inspiratorcomment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\InspiratorInappro.aspx.cs">
+      <DependentUpon>InspiratorInappro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\InspiratorInappro.aspx.designer.cs">
+      <DependentUpon>InspiratorInappro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\InspiratorLibrary.aspx.cs">
+      <DependentUpon>InspiratorLibrary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\InspiratorLibrary.aspx.designer.cs">
+      <DependentUpon>InspiratorLibrary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\InspiratorLike.aspx.cs">
+      <DependentUpon>InspiratorLike.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\InspiratorLike.aspx.designer.cs">
+      <DependentUpon>InspiratorLike.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\InspiratorManagement.aspx.cs">
+      <DependentUpon>InspiratorManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\InspiratorManagement.aspx.designer.cs">
+      <DependentUpon>InspiratorManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MessagesandTickets.aspx.cs">
+      <DependentUpon>MessagesandTickets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MessagesandTickets.aspx.designer.cs">
+      <DependentUpon>MessagesandTickets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MissionDetail.aspx.cs">
+      <DependentUpon>MissionDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MissionDetail.aspx.designer.cs">
+      <DependentUpon>MissionDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MissionManagement.aspx.cs">
+      <DependentUpon>MissionManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MissionManagement.aspx.designer.cs">
+      <DependentUpon>MissionManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Notes.aspx.cs">
+      <DependentUpon>Notes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Notes.aspx.designer.cs">
+      <DependentUpon>Notes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Personalization.aspx.cs">
+      <DependentUpon>Personalization.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Personalization.aspx.designer.cs">
+      <DependentUpon>Personalization.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TicketMesssages.aspx.cs">
+      <DependentUpon>TicketMesssages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TicketMesssages.aspx.designer.cs">
+      <DependentUpon>TicketMesssages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserAnalytics.aspx.cs">
+      <DependentUpon>UserAnalytics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserAnalytics.aspx.designer.cs">
+      <DependentUpon>UserAnalytics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\USerCircleDetail.aspx.cs">
+      <DependentUpon>USerCircleDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\USerCircleDetail.aspx.designer.cs">
+      <DependentUpon>USerCircleDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\userfriendList.aspx.cs">
+      <DependentUpon>userfriendList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\userfriendList.aspx.designer.cs">
+      <DependentUpon>userfriendList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserInvitation.aspx.cs">
+      <DependentUpon>UserInvitation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserInvitation.aspx.designer.cs">
+      <DependentUpon>UserInvitation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserReportedErrorLog.aspx.cs">
+      <DependentUpon>UserReportedErrorLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserReportedErrorLog.aspx.designer.cs">
+      <DependentUpon>UserReportedErrorLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UsersDetails.aspx.cs">
+      <DependentUpon>UsersDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UsersDetails.aspx.designer.cs">
+      <DependentUpon>UsersDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ViewTicketsReply.aspx.cs">
+      <DependentUpon>ViewTicketsReply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ViewTicketsReply.aspx.designer.cs">
+      <DependentUpon>ViewTicketsReply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HealthStats.aspx.cs">
+      <DependentUpon>HealthStats.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HealthStats.aspx.designer.cs">
+      <DependentUpon>HealthStats.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HealthstatChart.aspx.cs">
+      <DependentUpon>HealthstatChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HealthstatChart.aspx.designer.cs">
+      <DependentUpon>HealthstatChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clsScheduleMail.cs" />
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login_old.aspx.cs">
+      <DependentUpon>Login_old.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login_old.aspx.designer.cs">
+      <DependentUpon>Login_old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileAPI\AlereVitalityMobileAPI.asmx.cs">
+      <DependentUpon>AlereVitalityMobileAPI.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="privacyandpolicy.aspx.cs">
+      <DependentUpon>privacyandpolicy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="privacyandpolicy.aspx.designer.cs">
+      <DependentUpon>privacyandpolicy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Register1.aspx.cs">
+      <DependentUpon>Register1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register1.aspx.designer.cs">
+      <DependentUpon>Register1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterProfile.aspx.cs">
+      <DependentUpon>RegisterProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegisterProfile.aspx.designer.cs">
+      <DependentUpon>RegisterProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\alereimpactservice.asmx.cs">
+      <DependentUpon>alereimpactservice.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\FoodEssentialAPI.asmx.cs">
+      <DependentUpon>FoodEssentialAPI.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SiteMaster.Master.cs">
+      <DependentUpon>SiteMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteMaster.Master.designer.cs">
+      <DependentUpon>SiteMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationThanks.aspx.cs">
+      <DependentUpon>RegistrationThanks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrationThanks.aspx.designer.cs">
+      <DependentUpon>RegistrationThanks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="support.aspx.cs">
+      <DependentUpon>support.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="support.aspx.designer.cs">
+      <DependentUpon>support.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="termsandconditions.aspx.cs">
+      <DependentUpon>termsandconditions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="termsandconditions.aspx.designer.cs">
+      <DependentUpon>termsandconditions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\AdminMessagesFront.aspx.cs">
+      <DependentUpon>AdminMessagesFront.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\AdminMessagesFront.aspx.designer.cs">
+      <DependentUpon>AdminMessagesFront.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\APISearch.aspx.cs">
+      <DependentUpon>APISearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\APISearch.aspx.designer.cs">
+      <DependentUpon>APISearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\CategorySearch.aspx.cs">
+      <DependentUpon>CategorySearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\CategorySearch.aspx.designer.cs">
+      <DependentUpon>CategorySearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ChangeCircles.aspx.cs">
+      <DependentUpon>ChangeCircles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ChangeCircles.aspx.designer.cs">
+      <DependentUpon>ChangeCircles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\FitBitAccountSettings.aspx.cs">
+      <DependentUpon>FitBitAccountSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\FitBitAccountSettings.aspx.designer.cs">
+      <DependentUpon>FitBitAccountSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\FeedBackAndProblem.aspx.cs">
+      <DependentUpon>FeedBackAndProblem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\FeedBackAndProblem.aspx.designer.cs">
+      <DependentUpon>FeedBackAndProblem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\FitBitResponseMessage.aspx.cs">
+      <DependentUpon>FitBitResponseMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\FitBitResponseMessage.aspx.designer.cs">
+      <DependentUpon>FitBitResponseMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\InviteMembers.aspx.cs">
+      <DependentUpon>InviteMembers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\InviteMembers.aspx.designer.cs">
+      <DependentUpon>InviteMembers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Journal.aspx.cs">
+      <DependentUpon>Journal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Journal.aspx.designer.cs">
+      <DependentUpon>Journal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Log.aspx.cs">
+      <DependentUpon>Log.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Log.aspx.designer.cs">
+      <DependentUpon>Log.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\MyProfile.aspx.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\MyProfile.aspx.designer.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Notes.aspx.cs">
+      <DependentUpon>Notes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Notes.aspx.designer.cs">
+      <DependentUpon>Notes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Notifications.aspx.cs">
+      <DependentUpon>Notifications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Notifications.aspx.designer.cs">
+      <DependentUpon>Notifications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\PrivacyAndPolicy.aspx.cs">
+      <DependentUpon>PrivacyAndPolicy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\PrivacyAndPolicy.aspx.designer.cs">
+      <DependentUpon>PrivacyAndPolicy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Progress.aspx.cs">
+      <DependentUpon>Progress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Progress.aspx.designer.cs">
+      <DependentUpon>Progress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\PublicCircles.aspx.cs">
+      <DependentUpon>PublicCircles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\PublicCircles.aspx.designer.cs">
+      <DependentUpon>PublicCircles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\SearchMembers.aspx.cs">
+      <DependentUpon>SearchMembers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\SearchMembers.aspx.designer.cs">
+      <DependentUpon>SearchMembers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Support.aspx.cs">
+      <DependentUpon>Support.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Support.aspx.designer.cs">
+      <DependentUpon>Support.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\TermsAndConditions.aspx.cs">
+      <DependentUpon>TermsAndConditions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\TermsAndConditions.aspx.designer.cs">
+      <DependentUpon>TermsAndConditions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\TopselectedCircle.aspx.cs">
+      <DependentUpon>TopselectedCircle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\TopselectedCircle.aspx.designer.cs">
+      <DependentUpon>TopselectedCircle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucAdminMessagesNew.ascx.cs">
+      <DependentUpon>ucAdminMessagesNew.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucAdminMessagesNew.ascx.designer.cs">
+      <DependentUpon>ucAdminMessagesNew.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ChangeCircles_old.aspx.cs">
+      <DependentUpon>ChangeCircles_old.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ChangeCircles_old.aspx.designer.cs">
+      <DependentUpon>ChangeCircles_old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\CirclesNew.aspx.cs">
+      <DependentUpon>CirclesNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\CirclesNew.aspx.designer.cs">
+      <DependentUpon>CirclesNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucAdminPostedMessage.ascx.cs">
+      <DependentUpon>ucAdminPostedMessage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucAdminPostedMessage.ascx.designer.cs">
+      <DependentUpon>ucAdminPostedMessage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucAllCircles.ascx.cs">
+      <DependentUpon>ucAllCircles.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucAllCircles.ascx.designer.cs">
+      <DependentUpon>ucAllCircles.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucChangePassword.ascx.cs">
+      <DependentUpon>ucChangePassword.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucChangePassword.ascx.designer.cs">
+      <DependentUpon>ucChangePassword.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucFitBitAccountSettings.ascx.cs">
+      <DependentUpon>ucFitBitAccountSettings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucFitBitAccountSettings.ascx.designer.cs">
+      <DependentUpon>ucFitBitAccountSettings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucFoodEssentials.ascx.cs">
+      <DependentUpon>ucFoodEssentials.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucFoodEssentials.ascx.designer.cs">
+      <DependentUpon>ucFoodEssentials.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucChangeCircle.ascx.cs">
+      <DependentUpon>ucChangeCircle.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucChangeCircle.ascx.designer.cs">
+      <DependentUpon>ucChangeCircle.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucCircleList.ascx.cs">
+      <DependentUpon>ucCircleList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucCircleList.ascx.designer.cs">
+      <DependentUpon>ucCircleList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucCirclesNew.ascx.cs">
+      <DependentUpon>ucCirclesNew.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucCirclesNew.ascx.designer.cs">
+      <DependentUpon>ucCirclesNew.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucFoodLog.ascx.cs">
+      <DependentUpon>ucFoodLog.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucFoodLog.ascx.designer.cs">
+      <DependentUpon>ucFoodLog.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucInviteMembers.ascx.cs">
+      <DependentUpon>ucInviteMembers.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucInviteMembers.ascx.designer.cs">
+      <DependentUpon>ucInviteMembers.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucJournal.ascx.cs">
+      <DependentUpon>ucJournal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucJournal.ascx.designer.cs">
+      <DependentUpon>ucJournal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucMemberProfile.ascx.cs">
+      <DependentUpon>ucMemberProfile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucMemberProfile.ascx.designer.cs">
+      <DependentUpon>ucMemberProfile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucMissionGraph.ascx.cs">
+      <DependentUpon>ucMissionGraph.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucMissionGraph.ascx.designer.cs">
+      <DependentUpon>ucMissionGraph.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucMissionHistory.ascx.cs">
+      <DependentUpon>ucMissionHistory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucMissionHistory.ascx.designer.cs">
+      <DependentUpon>ucMissionHistory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucMissionOptions.ascx.cs">
+      <DependentUpon>ucMissionOptions.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucMissionOptions.ascx.designer.cs">
+      <DependentUpon>ucMissionOptions.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucMyProfile.ascx.cs">
+      <DependentUpon>ucMyProfile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucMyProfile.ascx.designer.cs">
+      <DependentUpon>ucMyProfile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\UCNIMNotification.ascx.cs">
+      <DependentUpon>UCNIMNotification.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\UCNIMNotification.ascx.designer.cs">
+      <DependentUpon>UCNIMNotification.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucNotification.ascx.cs">
+      <DependentUpon>ucNotification.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucNotification.ascx.designer.cs">
+      <DependentUpon>ucNotification.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucPrivacySettings.ascx.cs">
+      <DependentUpon>ucPrivacySettings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucPrivacySettings.ascx.designer.cs">
+      <DependentUpon>ucPrivacySettings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucProgressBarCaloriesEaten.ascx.cs">
+      <DependentUpon>ucProgressBarCaloriesEaten.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucProgressBarCaloriesEaten.ascx.designer.cs">
+      <DependentUpon>ucProgressBarCaloriesEaten.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\LibraryInspirators.ascx.cs">
+      <DependentUpon>LibraryInspirators.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\LibraryInspirators.ascx.designer.cs">
+      <DependentUpon>LibraryInspirators.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Missions.aspx.cs">
+      <DependentUpon>Missions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Missions.aspx.designer.cs">
+      <DependentUpon>Missions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucAcceptInvitation.ascx.cs">
+      <DependentUpon>ucAcceptInvitation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucAcceptInvitation.ascx.designer.cs">
+      <DependentUpon>ucAcceptInvitation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucFriendInspirator.ascx.cs">
+      <DependentUpon>ucFriendInspirator.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucFriendInspirator.ascx.designer.cs">
+      <DependentUpon>ucFriendInspirator.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucMemberList.ascx.cs">
+      <DependentUpon>ucMemberList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucMemberList.ascx.designer.cs">
+      <DependentUpon>ucMemberList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucFriendProfile.ascx.cs">
+      <DependentUpon>ucFriendProfile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucFriendProfile.ascx.designer.cs">
+      <DependentUpon>ucFriendProfile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucInspiratorDescription.ascx.cs">
+      <DependentUpon>ucInspiratorDescription.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucInspiratorDescription.ascx.designer.cs">
+      <DependentUpon>ucInspiratorDescription.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucInspirators.ascx.cs">
+      <DependentUpon>ucInspirators.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucInspirators.ascx.designer.cs">
+      <DependentUpon>ucInspirators.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucListMissions.ascx.cs">
+      <DependentUpon>ucListMissions.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucListMissions.ascx.designer.cs">
+      <DependentUpon>ucListMissions.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucMission.ascx.cs">
+      <DependentUpon>ucMission.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucMission.ascx.designer.cs">
+      <DependentUpon>ucMission.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucMyInspirator.ascx.cs">
+      <DependentUpon>ucMyInspirator.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucMyInspirator.ascx.designer.cs">
+      <DependentUpon>ucMyInspirator.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucPendingFriendRequests.ascx.cs">
+      <DependentUpon>ucPendingFriendRequests.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucPendingFriendRequests.ascx.designer.cs">
+      <DependentUpon>ucPendingFriendRequests.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucProgressBar.ascx.cs">
+      <DependentUpon>ucProgressBar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucProgressBar.ascx.designer.cs">
+      <DependentUpon>ucProgressBar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucProgressGraph.ascx.cs">
+      <DependentUpon>ucProgressGraph.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucProgressGraph.ascx.designer.cs">
+      <DependentUpon>ucProgressGraph.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucProgressGraphs.ascx.cs">
+      <DependentUpon>ucProgressGraphs.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucProgressGraphs.ascx.designer.cs">
+      <DependentUpon>ucProgressGraphs.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucReportProblem.ascx.cs">
+      <DependentUpon>ucReportProblem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucReportProblem.ascx.designer.cs">
+      <DependentUpon>ucReportProblem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucSearchFriends.ascx.cs">
+      <DependentUpon>ucSearchFriends.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucSearchFriends.ascx.designer.cs">
+      <DependentUpon>ucSearchFriends.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\LoginUserMaster.Master.cs">
+      <DependentUpon>LoginUserMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\LoginUserMaster.Master.designer.cs">
+      <DependentUpon>LoginUserMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucCircles.ascx.cs">
+      <DependentUpon>ucCircles.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucCircles.ascx.designer.cs">
+      <DependentUpon>ucCircles.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucSettingOption.ascx.cs">
+      <DependentUpon>ucSettingOption.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucSettingOption.ascx.designer.cs">
+      <DependentUpon>ucSettingOption.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucTickets.ascx.cs">
+      <DependentUpon>ucTickets.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucTickets.ascx.designer.cs">
+      <DependentUpon>ucTickets.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucTrackMission.ascx.cs">
+      <DependentUpon>ucTrackMission.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucTrackMission.ascx.designer.cs">
+      <DependentUpon>ucTrackMission.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucUserFeedBack.ascx.cs">
+      <DependentUpon>ucUserFeedBack.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucUserFeedBack.ascx.designer.cs">
+      <DependentUpon>ucUserFeedBack.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucUserProfile.ascx.cs">
+      <DependentUpon>ucUserProfile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucUserProfile.ascx.designer.cs">
+      <DependentUpon>ucUserProfile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucWall.ascx.cs">
+      <DependentUpon>ucWall.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ucWall.ascx.designer.cs">
+      <DependentUpon>ucWall.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Wall.aspx.cs">
+      <DependentUpon>Wall.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Wall.aspx.designer.cs">
+      <DependentUpon>Wall.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\FriendProfile.aspx.cs">
+      <DependentUpon>FriendProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\FriendProfile.aspx.designer.cs">
+      <DependentUpon>FriendProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\PendingFriendRequests.aspx.cs">
+      <DependentUpon>PendingFriendRequests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\PendingFriendRequests.aspx.designer.cs">
+      <DependentUpon>PendingFriendRequests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\MemberList.aspx.cs">
+      <DependentUpon>MemberList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\MemberList.aspx.designer.cs">
+      <DependentUpon>MemberList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword1.aspx.cs">
+      <DependentUpon>ForgotPassword1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword1.aspx.designer.cs">
+      <DependentUpon>ForgotPassword1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationThanks1.aspx.cs">
+      <DependentUpon>RegistrationThanks1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrationThanks1.aspx.designer.cs">
+      <DependentUpon>RegistrationThanks1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Inspirators.aspx.cs">
+      <DependentUpon>Inspirators.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Inspirators.aspx.designer.cs">
+      <DependentUpon>Inspirators.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\alereimpactservice\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPasswordThank.aspx.cs">
+      <DependentUpon>ForgotPasswordThank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPasswordThank.aspx.designer.cs">
+      <DependentUpon>ForgotPasswordThank.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\AdminMaster.Master" />
+    <None Include="ckeditor\.htaccess" />
+    <Content Include="AdminChangePassword.aspx" />
+    <Content Include="Admin\AddFoodCategory.aspx" />
+    <Content Include="Admin\AdminChangePassword.aspx" />
+    <Content Include="Admin\AdminDashboard.aspx" />
+    <Content Include="Admin\AdminLogin.aspx" />
+    <Content Include="Admin\AdminPanel.aspx" />
+    <Content Include="Admin\CircleManagement.aspx" />
+    <Content Include="Admin\CircleMissionDetail.aspx" />
+    <Content Include="Admin\Circles.aspx" />
+    <Content Include="Admin\ErrorTypeLog.aspx" />
+    <Content Include="Admin\FeedBackMessage.aspx" />
+    <Content Include="Admin\Flags.aspx" />
+    <Content Include="Admin\GlobalMessageDetail.aspx" />
+    <Content Include="Admin\Group.aspx" />
+    <Content Include="Admin\GroupDetail.aspx" />
+    <Content Include="Admin\GroupEmail.aspx" />
+    <Content Include="Admin\InspiratorCircleDetail.aspx" />
+    <Content Include="Admin\Inspiratorcomment.aspx" />
+    <Content Include="Admin\InspiratorInappro.aspx" />
+    <Content Include="Admin\InspiratorLibrary.aspx" />
+    <Content Include="Admin\InspiratorLike.aspx" />
+    <Content Include="Admin\InspiratorManagement.aspx" />
+    <Content Include="Admin\MessagesandTickets.aspx" />
+    <Content Include="Admin\MissionDetail.aspx" />
+    <Content Include="Admin\MissionManagement.aspx" />
+    <Content Include="Admin\Notes.aspx" />
+    <Content Include="Admin\Personalization.aspx" />
+    <Content Include="Admin\TicketMesssages.aspx" />
+    <Content Include="Admin\UserAnalytics.aspx" />
+    <Content Include="Admin\USerCircleDetail.aspx" />
+    <Content Include="Admin\userfriendList.aspx" />
+    <Content Include="Admin\UserInvitation.aspx" />
+    <Content Include="Admin\UserReportedErrorLog.aspx" />
+    <Content Include="Admin\UsersDetails.aspx" />
+    <Content Include="Admin\ViewTicketsReply.aspx" />
+    <Content Include="Admin\HealthStats.aspx" />
+    <Content Include="Admin\HealthstatChart.aspx" />
+    <Content Include="ckeditor\adapters\jquery.js" />
+    <Content Include="ckeditor\CHANGES.html" />
+    <Content Include="ckeditor\ckeditor.js" />
+    <Content Include="ckeditor\ckeditor_basic.js" />
+    <Content Include="ckeditor\config.js" />
+    <Content Include="ckeditor\contents.css" />
+    <Content Include="ckeditor\images\spacer.gif" />
+    <Content Include="ckeditor\INSTALL.html" />
+    <Content Include="ckeditor\lang\af.js" />
+    <Content Include="ckeditor\lang\ar.js" />
+    <Content Include="ckeditor\lang\bg.js" />
+    <Content Include="ckeditor\lang\bn.js" />
+    <Content Include="ckeditor\lang\bs.js" />
+    <Content Include="ckeditor\lang\ca.js" />
+    <Content Include="ckeditor\lang\cs.js" />
+    <Content Include="ckeditor\lang\cy.js" />
+    <Content Include="ckeditor\lang\da.js" />
+    <Content Include="ckeditor\lang\de.js" />
+    <Content Include="ckeditor\lang\el.js" />
+    <Content Include="ckeditor\lang\en-au.js" />
+    <Content Include="ckeditor\lang\en-ca.js" />
+    <Content Include="ckeditor\lang\en-gb.js" />
+    <Content Include="ckeditor\lang\en.js" />
+    <Content Include="ckeditor\lang\eo.js" />
+    <Content Include="ckeditor\lang\es.js" />
+    <Content Include="ckeditor\lang\et.js" />
+    <Content Include="ckeditor\lang\eu.js" />
+    <Content Include="ckeditor\lang\fa.js" />
+    <Content Include="ckeditor\lang\fi.js" />
+    <Content Include="ckeditor\lang\fo.js" />
+    <Content Include="ckeditor\lang\fr-ca.js" />
+    <Content Include="ckeditor\lang\fr.js" />
+    <Content Include="ckeditor\lang\gl.js" />
+    <Content Include="ckeditor\lang\gu.js" />
+    <Content Include="ckeditor\lang\he.js" />
+    <Content Include="ckeditor\lang\hi.js" />
+    <Content Include="ckeditor\lang\hr.js" />
+    <Content Include="ckeditor\lang\hu.js" />
+    <Content Include="ckeditor\lang\id.js" />
+    <Content Include="ckeditor\lang\is.js" />
+    <Content Include="ckeditor\lang\it.js" />
+    <Content Include="ckeditor\lang\ja.js" />
+    <Content Include="ckeditor\lang\ka.js" />
+    <Content Include="ckeditor\lang\km.js" />
+    <Content Include="ckeditor\lang\ko.js" />
+    <Content Include="ckeditor\lang\lt.js" />
+    <Content Include="ckeditor\lang\lv.js" />
+    <Content Include="ckeditor\lang\mk.js" />
+    <Content Include="ckeditor\lang\mn.js" />
+    <Content Include="ckeditor\lang\ms.js" />
+    <Content Include="ckeditor\lang\nb.js" />
+    <Content Include="ckeditor\lang\nl.js" />
+    <Content Include="ckeditor\lang\no.js" />
+    <Content Include="ckeditor\lang\pl.js" />
+    <Content Include="ckeditor\lang\pt-br.js" />
+    <Content Include="ckeditor\lang\pt.js" />
+    <Content Include="ckeditor\lang\ro.js" />
+    <Content Include="ckeditor\lang\ru.js" />
+    <Content Include="ckeditor\lang\sk.js" />
+    <Content Include="ckeditor\lang\sl.js" />
+    <Content Include="ckeditor\lang\sr-latn.js" />
+    <Content Include="ckeditor\lang\sr.js" />
+    <Content Include="ckeditor\lang\sv.js" />
+    <Content Include="ckeditor\lang\th.js" />
+    <Content Include="ckeditor\lang\tr.js" />
+    <Content Include="ckeditor\lang\ug.js" />
+    <Content Include="ckeditor\lang\uk.js" />
+    <Content Include="ckeditor\lang\vi.js" />
+    <Content Include="ckeditor\lang\zh-cn.js" />
+    <Content Include="ckeditor\lang\zh.js" />
+    <Content Include="ckeditor\lang\_languages.js" />
+    <Content Include="ckeditor\lang\_translationstatus.txt" />
+    <Content Include="ckeditor\LICENSE.html" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\cs.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\cy.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\da.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\de.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\el.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\en.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\eo.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\fa.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\fi.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\fr.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\gu.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\he.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\it.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\mk.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\nb.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\nl.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\no.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\pt-br.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\ro.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\tr.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\ug.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\vi.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\zh-cn.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\_translationstatus.txt" />
+    <Content Include="ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="ckeditor\plugins\adobeair\plugin.js" />
+    <Content Include="ckeditor\plugins\ajax\plugin.js" />
+    <Content Include="ckeditor\plugins\autogrow\plugin.js" />
+    <Content Include="ckeditor\plugins\bbcode\plugin.js" />
+    <Content Include="ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="ckeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\bg.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\cs.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\cy.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\da.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\de.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\el.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\en.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\eo.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\et.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\fa.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\fi.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\fr.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\gu.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\he.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\hr.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\it.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\nb.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\nl.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\no.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\pl.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\pt-br.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\tr.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\ug.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\uk.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\vi.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\zh-cn.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\_translationstatus.txt" />
+    <Content Include="ckeditor\plugins\devtools\plugin.js" />
+    <Content Include="ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="ckeditor\plugins\div\dialogs\div.js" />
+    <Content Include="ckeditor\plugins\docprops\dialogs\docprops.js" />
+    <Content Include="ckeditor\plugins\docprops\plugin.js" />
+    <Content Include="ckeditor\plugins\find\dialogs\find.js" />
+    <Content Include="ckeditor\plugins\flash\dialogs\flash.js" />
+    <Content Include="ckeditor\plugins\flash\images\placeholder.png" />
+    <Content Include="ckeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="ckeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="ckeditor\plugins\iframedialog\plugin.js" />
+    <Content Include="ckeditor\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="ckeditor\plugins\iframe\images\placeholder.png" />
+    <Content Include="ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="ckeditor\plugins\link\images\anchor.gif" />
+    <Content Include="ckeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="ckeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="ckeditor\plugins\pastetext\dialogs\pastetext.js" />
+    <Content Include="ckeditor\plugins\placeholder\dialogs\placeholder.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\bg.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\cs.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\cy.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\da.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\de.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\el.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\en.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\eo.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\et.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\fa.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\fi.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\fr.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\he.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\hr.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\it.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\nb.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\nl.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\no.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\pl.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\pt-br.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\tr.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\ug.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\uk.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\vi.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\zh-cn.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\_translationstatus.txt" />
+    <Content Include="ckeditor\plugins\placeholder\placeholder.gif" />
+    <Content Include="ckeditor\plugins\placeholder\plugin.js" />
+    <Content Include="ckeditor\plugins\preview\preview.html" />
+    <Content Include="ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_address.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_div.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h1.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h2.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h3.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h4.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h5.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h6.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_p.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_pre.png" />
+    <Content Include="ckeditor\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="ckeditor\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\envelope.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\heart.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\kiss.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\cs.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\cy.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\de.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\el.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\en.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\eo.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\et.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\fa.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\fi.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\fr.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\he.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\hr.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\it.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\nb.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\nl.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\no.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\pt-br.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\tr.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\ug.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\zh-cn.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\_translationstatus.txt" />
+    <Content Include="ckeditor\plugins\stylesheetparser\plugin.js" />
+    <Content Include="ckeditor\plugins\styles\styles\default.js" />
+    <Content Include="ckeditor\plugins\tableresize\plugin.js" />
+    <Content Include="ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="ckeditor\plugins\templates\dialogs\templates.js" />
+    <Content Include="ckeditor\plugins\templates\templates\default.js" />
+    <Content Include="ckeditor\plugins\templates\templates\images\template1.gif" />
+    <Content Include="ckeditor\plugins\templates\templates\images\template2.gif" />
+    <Content Include="ckeditor\plugins\templates\templates\images\template3.gif" />
+    <Content Include="ckeditor\plugins\uicolor\dialogs\uicolor.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\bg.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\cs.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\cy.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\da.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\de.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\el.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\en.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\eo.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\et.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\fa.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\fi.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\fr.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\he.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\hr.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\it.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\mk.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\nb.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\nl.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\no.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\pl.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\pt-br.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\tr.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\ug.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\uk.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\vi.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\zh-cn.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\_translationstatus.txt" />
+    <Content Include="ckeditor\plugins\uicolor\plugin.js" />
+    <Content Include="ckeditor\plugins\uicolor\uicolor.gif" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\hue_bg.png" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\hue_thumb.png" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\picker_mask.png" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\picker_thumb.png" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\yui.css" />
+    <Content Include="ckeditor\plugins\uicolor\yui\yui.js" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="ckeditor\plugins\xml\plugin.js" />
+    <Content Include="ckeditor\skins\kama\dialog.css" />
+    <Content Include="ckeditor\skins\kama\editor.css" />
+    <Content Include="ckeditor\skins\kama\icons.png" />
+    <Content Include="ckeditor\skins\kama\icons_rtl.png" />
+    <Content Include="ckeditor\skins\kama\images\dialog_sides.gif" />
+    <Content Include="ckeditor\skins\kama\images\dialog_sides.png" />
+    <Content Include="ckeditor\skins\kama\images\dialog_sides_rtl.png" />
+    <Content Include="ckeditor\skins\kama\images\mini.gif" />
+    <Content Include="ckeditor\skins\kama\images\noimage.png" />
+    <Content Include="ckeditor\skins\kama\images\sprites.png" />
+    <Content Include="ckeditor\skins\kama\images\sprites_ie6.png" />
+    <Content Include="ckeditor\skins\kama\images\toolbar_start.gif" />
+    <Content Include="ckeditor\skins\kama\skin.js" />
+    <Content Include="ckeditor\skins\kama\templates.css" />
+    <Content Include="ckeditor\skins\office2003\dialog.css" />
+    <Content Include="ckeditor\skins\office2003\editor.css" />
+    <Content Include="ckeditor\skins\office2003\icons.png" />
+    <Content Include="ckeditor\skins\office2003\icons_rtl.png" />
+    <Content Include="ckeditor\skins\office2003\images\dialog_sides.gif" />
+    <Content Include="ckeditor\skins\office2003\images\dialog_sides.png" />
+    <Content Include="ckeditor\skins\office2003\images\dialog_sides_rtl.png" />
+    <Content Include="ckeditor\skins\office2003\images\mini.gif" />
+    <Content Include="ckeditor\skins\office2003\images\noimage.png" />
+    <Content Include="ckeditor\skins\office2003\images\sprites.png" />
+    <Content Include="ckeditor\skins\office2003\images\sprites_ie6.png" />
+    <Content Include="ckeditor\skins\office2003\skin.js" />
+    <Content Include="ckeditor\skins\office2003\templates.css" />
+    <Content Include="ckeditor\skins\v2\dialog.css" />
+    <Content Include="ckeditor\skins\v2\editor.css" />
+    <Content Include="ckeditor\skins\v2\icons.png" />
+    <Content Include="ckeditor\skins\v2\icons_rtl.png" />
+    <Content Include="ckeditor\skins\v2\images\dialog_sides.gif" />
+    <Content Include="ckeditor\skins\v2\images\dialog_sides.png" />
+    <Content Include="ckeditor\skins\v2\images\dialog_sides_rtl.png" />
+    <Content Include="ckeditor\skins\v2\images\mini.gif" />
+    <Content Include="ckeditor\skins\v2\images\noimage.png" />
+    <Content Include="ckeditor\skins\v2\images\sprites.png" />
+    <Content Include="ckeditor\skins\v2\images\sprites_ie6.png" />
+    <Content Include="ckeditor\skins\v2\images\toolbar_start.gif" />
+    <Content Include="ckeditor\skins\v2\skin.js" />
+    <Content Include="ckeditor\skins\v2\templates.css" />
+    <Content Include="ckeditor\themes\default\theme.js" />
+    <Content Include="CSS\AdminStyle.css" />
+    <Content Include="CSS\BalloonPopupOvalStyle.css" />
+    <Content Include="CSS\Circlestyle.css" />
+    <Content Include="CSS\circle_css\common.css" />
+    <Content Include="CSS\circle_css\css.css" />
+    <Content Include="CSS\circle_css\demo.css" />
+    <Content Include="CSS\circle_css\style.css" />
+    <Content Include="CSS\default.css" />
+    <Content Include="CSS\flexslider.css" />
+    <Content Include="CSS\global.css" />
+    <Content Include="CSS\index.css" />
+    <Content Include="CSS\mission.css" />
+    <Content Include="CSS\newstyle.css" />
+    <Content Include="CSS\Privacycss\index.css" />
+    <Content Include="CSS\Privacycss\index_main.css" />
+    <Content Include="CSS\Privacycss\mission.css" />
+    <Content Include="CSS\Privacycss\privacy.css" />
+    <Content Include="CSS\Privacycss\reset.css" />
+    <Content Include="CSS\Privacycss\style.css" />
+    <Content Include="CSS\Privacycss\style_bck_10.04.css" />
+    <Content Include="CSS\Privacycss\tooltips.css" />
+    <Content Include="CSS\reset.css" />
+    <Content Include="CSS\style.css" />
+    <Content Include="CSS\style1.css" />
+    <Content Include="CSS\stylenewdesign.css" />
+    <Content Include="CSS\style_mainpage.css" />
+    <Content Include="CSS\ticker-style.css" />
+    <Content Include="CSS\tooltip.css" />
+    <Content Include="fancybox\blank.gif" />
+    <Content Include="fancybox\fancybox_loading.gif" />
+    <Content Include="fancybox\fancybox_sprite.png" />
+    <Content Include="fancybox\helpers\fancybox_buttons.png" />
+    <Content Include="fancybox\helpers\jquery.fancybox-buttons.css" />
+    <Content Include="fancybox\helpers\jquery.fancybox-buttons.js" />
+    <Content Include="fancybox\helpers\jquery.fancybox-media.js" />
+    <Content Include="fancybox\helpers\jquery.fancybox-thumbs.css" />
+    <Content Include="fancybox\helpers\jquery.fancybox-thumbs.js" />
+    <Content Include="fancybox\jquery.fancybox.css" />
+    <Content Include="fancybox\jquery.fancybox.js" />
+    <Content Include="fancybox\jquery.fancybox.pack.js" />
+    <Content Include="ForgotPassword.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="ErrorPage.htm" />
+    <Content Include="images\1.png" />
+    <Content Include="images\10.png" />
+    <Content Include="images\11.png" />
+    <Content Include="images\12.png" />
+    <Content Include="images\13.png" />
+    <Content Include="images\1369312269_102.png" />
+    <Content Include="images\14.png" />
+    <Content Include="images\15.png" />
+    <Content Include="images\16.png" />
+    <Content Include="images\17.png" />
+    <Content Include="images\18.png" />
+    <Content Include="images\19.png" />
+    <Content Include="images\1st.png" />
+    <Content Include="images\1st_circle.png" />
+    <Content Include="images\1st_tab.png" />
+    <Content Include="images\1_mark.jpg" />
+    <Content Include="images\2.png" />
+    <Content Include="images\20.png" />
+    <Content Include="images\2013-07-08_0836_03.jpg" />
+    <Content Include="images\2013-07-08_0836_06.jpg" />
+    <Content Include="images\2013-07-08_0836_09.jpg" />
+    <Content Include="images\21.png" />
+    <Content Include="images\22.png" />
+    <Content Include="images\23.png" />
+    <Content Include="images\24.png" />
+    <Content Include="images\2nd.png" />
+    <Content Include="images\2nd_box.png" />
+    <Content Include="images\2nd_circle.png" />
+    <Content Include="images\2nd_tab.png" />
+    <Content Include="images\2one.png" />
+    <Content Include="images\2_mark.jpg" />
+    <Content Include="images\3.png" />
+    <Content Include="images\3rd.png" />
+    <Content Include="images\3rdone.png" />
+    <Content Include="images\3rd_circle.png" />
+    <Content Include="images\3rd_tab.png" />
+    <Content Include="images\3_mark.jpg" />
+    <Content Include="images\4.png" />
+    <Content Include="images\4th_circle.png" />
+    <Content Include="images\4_mark.jpg" />
+    <Content Include="images\5.png" />
+    <Content Include="images\5_mark.jpg" />
+    <Content Include="images\6.png" />
+    <Content Include="images\7.png" />
+    <Content Include="images\8.png" />
+    <Content Include="images\9.png" />
+    <Content Include="images\a %2817%29.png" />
+    <Content Include="images\abc_icon.png" />
+    <Content Include="images\about_me_icon.gif" />
+    <Content Include="images\accept.png" />
+    <Content Include="images\Actions-file-close-icon.png" />
+    <Content Include="images\Actions-go-next-icon.png" />
+    <Content Include="images\Actions-go-previous-icon.png" />
+    <Content Include="images\Actions-im-user-offline-icon.png" />
+    <Content Include="images\action_bg.gif" />
+    <Content Include="images\act_active_bg.png" />
+    <Content Include="images\act_bin.png" />
+    <Content Include="images\act_date_bg.png" />
+    <Content Include="images\act_food_button.png" />
+    <Content Include="images\act_green_bg.png" />
+    <Content Include="images\act_icon1.png" />
+    <Content Include="images\act_icon2.png" />
+    <Content Include="images\act_inactive_bg.png" />
+    <Content Include="images\act_left.png" />
+    <Content Include="images\act_light_green_bg.png" />
+    <Content Include="images\act_log_button.png" />
+    <Content Include="images\act_orange_bg.png" />
+    <Content Include="images\act_right.png" />
+    <Content Include="images\add-icon.png" />
+    <Content Include="images\add.png" />
+    <Content Include="images\AddCircle.png" />
+    <Content Include="images\AddCircle1.png" />
+    <Content Include="images\add_icon.png" />
+    <Content Include="images\add_ins.png" />
+    <Content Include="images\add_log.png" />
+    <Content Include="images\ALERE-VITALITY-policies %282%29.png" />
+    <Content Include="images\ALERE-VITALITY-policies.jpg" />
+    <Content Include="images\ALERE-VITALITY-policies.png" />
+    <Content Include="images\ALERE-VITALITY-termaconditions.png" />
+    <Content Include="images\alert.png" />
+    <Content Include="images\alise1.jpg" />
+    <Content Include="images\all_circle.png" />
+    <Content Include="images\analytic.png" />
+    <Content Include="images\angry.png" />
+    <Content Include="images\app_sta_da.png" />
+    <Content Include="images\app_sta_da_hover.png" />
+    <Content Include="images\aq.png" />
+    <Content Include="images\area_da.png" />
+    <Content Include="images\area_hover_da.png" />
+    <Content Include="images\arow.jpg" />
+    <Content Include="images\arrow-left.png" />
+    <Content Include="images\Arrow-Right-icon.png" />
+    <Content Include="images\arrow-right.png" />
+    <Content Include="images\arrow.png" />
+    <Content Include="images\arrowhl.png" />
+    <Content Include="images\arrowhr.png" />
+    <Content Include="images\arrowvb.png" />
+    <Content Include="images\arrowvt.png" />
+    <Content Include="images\arrow_blue.png" />
+    <Content Include="images\arrow_down.png" />
+    <Content Include="images\arrow_down_top.png" />
+    <Content Include="images\arrow_lft.png" />
+    <Content Include="images\arrow_rgt.png" />
+    <Content Include="images\attachment1.png" />
+    <Content Include="images\BagleCoffee.png" />
+    <Content Include="images\ballon-icon.png" />
+    <Content Include="images\bg-all.png" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\bg.png" />
+    <Content Include="images\bg1.jpg" />
+    <Content Include="images\bg2.jpg" />
+    <Content Include="images\bg2.png" />
+    <Content Include="images\bg_aa.png" />
+    <Content Include="images\bg_btn.jpg" />
+    <Content Include="images\bg_btn_hover.jpg" />
+    <Content Include="images\bg_control_nav.png" />
+    <Content Include="images\bg_error.jpg" />
+    <Content Include="images\bg_log.png" />
+    <Content Include="images\bg_lt_body.png" />
+    <Content Include="images\bg_mission.png" />
+    <Content Include="images\bg_nav.gif" />
+    <Content Include="images\blank.jpg" />
+    <Content Include="images\blog.png" />
+    <Content Include="images\blue_bar.png" />
+    <Content Include="images\box_thumb.png" />
+    <Content Include="images\box_thumbp -large.png" />
+    <Content Include="images\box_thumbp.png" />
+    <Content Include="images\browse_ciricles_icon.gif" />
+    <Content Include="images\btm.jpg" />
+    <Content Include="images\btm.png" />
+    <Content Include="images\btm_corner.png" />
+    <Content Include="images\btn_bg.gif" />
+    <Content Include="images\btn_bg1.gif" />
+    <Content Include="images\bubb2.png" />
+    <Content Include="images\bubble.png" />
+    <Content Include="images\button_circle.png" />
+    <Content Include="images\cclose.png" />
+    <Content Include="images\centre.png" />
+    <Content Include="images\change_pass.png" />
+    <Content Include="images\change_passwrod.png" />
+    <Content Include="images\change_pwd.jpg" />
+    <Content Include="images\chart.png" />
+    <Content Include="images\chart_icon.png" />
+    <Content Include="images\chart_new.png" />
+    <Content Include="images\Circle-group-icon.png" />
+    <Content Include="images\circle.png" />
+    <Content Include="images\circle_add.png" />
+    <Content Include="images\cities_da.png" />
+    <Content Include="images\cities_da_hover.png" />
+    <Content Include="images\clear_btn.png" />
+    <Content Include="images\client_interact.png" />
+    <Content Include="images\clock.png" />
+    <Content Include="images\Close-icon.png" />
+    <Content Include="images\Close-icon1.png" />
+    <Content Include="images\closed.png" />
+    <Content Include="images\Close_1.png" />
+    <Content Include="images\close_btn.png" />
+    <Content Include="images\close_btn11.png" />
+    <Content Include="images\close_btn111.png" />
+    <Content Include="images\color_cricel.png" />
+    <Content Include="images\coming.jpg" />
+    <Content Include="images\comm1.jpg" />
+    <Content Include="images\comm2.jpg" />
+    <Content Include="images\comm3.jpg" />
+    <Content Include="images\comm4.jpg" />
+    <Content Include="images\comm5.jpg" />
+    <Content Include="images\Comment-icon.png" />
+    <Content Include="images\comment_icon.png" />
+    <Content Include="images\content_mgmt.png" />
+    <Content Include="images\content_mgmt_hover.png" />
+    <Content Include="images\content_mng_sys.png" />
+    <Content Include="images\content_mng_sys_hover_da.png" />
+    <Content Include="images\controls.png" />
+    <Content Include="images\Copy %282%29 of drop_down_bg.png" />
+    <Content Include="images\Copy of drop_down_bg.png" />
+    <Content Include="images\Copy of input_bg.png" />
+    <Content Include="images\Copy of password.png" />
+    <Content Include="images\Copy of shadow_top_login.png" />
+    <Content Include="images\count_subcomment.png" />
+    <Content Include="images\crossJournal.png" />
+    <Content Include="images\dailyprogress.png" />
+    <Content Include="images\date_arrow.png" />
+    <Content Include="images\deadline.png" />
+    <Content Include="images\deadline1.png" />
+    <Content Include="images\Default-Icon-icon 1.png" />
+    <Content Include="images\Default-Icon-icon.png" />
+    <Content Include="images\Default-Icon-icon2.png" />
+    <Content Include="images\delete-icon-blue.png" />
+    <Content Include="images\delete-icon.png" />
+    <Content Include="images\delete.png" />
+    <Content Include="images\DeleteRed.png" />
+    <Content Include="images\delete_button.gif" />
+    <Content Include="images\delete_files_icon.png" />
+    <Content Include="images\delete_icon.png" />
+    <Content Include="images\delete_x.gif" />
+    <Content Include="images\dl-arr.png" />
+    <Content Include="images\down-arr.gif" />
+    <Content Include="images\download.jpg" />
+    <Content Include="images\dp_date.png" />
+    <Content Include="images\drink.jpg" />
+    <Content Include="images\drop_arrow.png" />
+    <Content Include="images\drop_down.png" />
+    <Content Include="images\drop_down_bg.png" />
+    <Content Include="images\drop_down_bg_small.png" />
+    <Content Include="images\edit.png" />
+    <Content Include="images\edit_icon.png" />
+    <Content Include="images\empty_Graph.png" />
+    <Content Include="images\empty_StepsGraph.png" />
+    <Content Include="images\empty_WeightGraph.png" />
+    <Content Include="images\Error-icon.png" />
+    <Content Include="images\error_bg.png" />
+    <Content Include="images\error_img_one.jpg" />
+    <Content Include="images\Excel-icon.png" />
+    <Content Include="images\export.png" />
+    <Content Include="images\favicon.ico" />
+    <Content Include="images\Favorites-icon.png" />
+    <Content Include="images\fav_icon.png" />
+    <Content Include="images\fb-login.png" />
+    <Content Include="images\fb.png" />
+    <Content Include="images\fb_icon.png" />
+    <Content Include="images\feedback.jpg" />
+    <Content Include="images\Files-Edit-file-icon.png" />
+    <Content Include="images\filled.png" />
+    <Content Include="images\first_box.png" />
+    <Content Include="images\Flag-red-icon.png" />
+    <Content Include="images\flag.png" />
+    <Content Include="images\flag_red.png" />
+    <Content Include="images\food_fav.png" />
+    <Content Include="images\food_icon.png" />
+    <Content Include="images\food_stuff.png" />
+    <Content Include="images\footer.png" />
+    <Content Include="images\footer_bg.png" />
+    <Content Include="images\footer_img.png" />
+    <Content Include="images\forget_pass_btn.gif" />
+    <Content Include="images\forgot_box.png" />
+    <Content Include="images\forkme.png" />
+    <Content Include="images\foursquare-badge.png" />
+    <Content Include="images\frequency_da.png" />
+    <Content Include="images\frequency_da_hover.png" />
+    <Content Include="images\Friends-icon.png" />
+    <Content Include="images\friend_avatar_default.jpg" />
+    <Content Include="images\FruitsEggs.png" />
+    <Content Include="images\gf.png" />
+    <Content Include="images\gf1.png" />
+    <Content Include="images\GlassJuice.png" />
+    <Content Include="images\gowalla.png" />
+    <Content Include="images\gplus.png" />
+    <Content Include="images\gplus1.png" />
+    <Content Include="images\graph.png" />
+    <Content Include="images\green-user-icon.png" />
+    <Content Include="images\group.png" />
+    <Content Include="images\Growing-rate-graph.jpg" />
+    <Content Include="images\growth_icon.gif" />
+    <Content Include="images\happy.png" />
+    <Content Include="images\header.png" />
+    <Content Include="images\header_background.png" />
+    <Content Include="images\header_mission.png" />
+    <Content Include="images\heading_login_img.gif" />
+    <Content Include="images\heading_table_holiday.gif" />
+    <Content Include="images\healthVitatliy.jpg" />
+    <Content Include="images\heart.png" />
+    <Content Include="images\heding_bg_table.gif" />
+    <Content Include="images\Help-icon.png" />
+    <Content Include="images\help.png" />
+    <Content Include="images\hierarchy_da.png" />
+    <Content Include="images\hierarchy_da_hover.png" />
+    <Content Include="images\history.png" />
+    <Content Include="images\holiday_btn_bg.png" />
+    <Content Include="images\holiday_da.png" />
+    <Content Include="images\holiday_da_hover.png" />
+    <Content Include="images\home.jpg" />
+    <Content Include="images\hubs_da.png" />
+    <Content Include="images\hubs_da_hover.png" />
+    <Content Include="images\human.png" />
+    <Content Include="images\icon1.png" />
+    <Content Include="images\icon_blank.gif" />
+    <Content Include="images\icon_email_index.png" />
+    <Content Include="images\icon_popup.png" />
+    <Content Include="images\icon_thumb.png" />
+    <Content Include="images\imagesNew\accordion_toggle.jpg" />
+    <Content Include="images\imagesNew\accordion_toggle_active.jpg" />
+    <Content Include="images\imagesNew\acor_bar_open.png" />
+    <Content Include="images\imagesNew\alere.png" />
+    <Content Include="images\imagesNew\bg.jpg" />
+    <Content Include="images\imagesNew\button_circle.png" />
+    <Content Include="images\imagesNew\circle.jpg" />
+    <Content Include="images\imagesNew\circle_bg.png" />
+    <Content Include="images\imagesNew\clock.png" />
+    <Content Include="images\imagesNew\close_tab_acor.png" />
+    <Content Include="images\imagesNew\DefaultInnerCircle.jpg" />
+    <Content Include="images\imagesNew\email.png" />
+    <Content Include="images\imagesNew\email_bg.png" />
+    <Content Include="images\imagesNew\email_register.png" />
+    <Content Include="images\imagesNew\fb.png" />
+    <Content Include="images\imagesNew\footer_bg_login.png" />
+    <Content Include="images\imagesNew\gplus.png" />
+    <Content Include="images\imagesNew\graph.png" />
+    <Content Include="images\imagesNew\header_bg.jpg" />
+    <Content Include="images\imagesNew\header_bg_login.png" />
+    <Content Include="images\imagesNew\h_accordion_toggle.jpg" />
+    <Content Include="images\imagesNew\h_accordion_toggle_active.jpg" />
+    <Content Include="images\imagesNew\inspirator.jpg" />
+    <Content Include="images\imagesNew\invite_btn.jpg" />
+    <Content Include="images\imagesNew\invite_mail.jpg" />
+    <Content Include="images\imagesNew\login.png" />
+    <Content Include="images\imagesNew\logout.png" />
+    <Content Include="images\imagesNew\mission.jpg" />
+    <Content Include="images\imagesNew\or.png" />
+    <Content Include="images\imagesNew\password.png" />
+    <Content Include="images\imagesNew\profile_dp.jpg" />
+    <Content Include="images\imagesNew\ready.jpg" />
+    <Content Include="images\imagesNew\register.png" />
+    <Content Include="images\imagesNew\select.png" />
+    <Content Include="images\imagesNew\sel_hover.png" />
+    <Content Include="images\imagesNew\sel_nothover.png" />
+    <Content Include="images\imagesNew\sending.jpg" />
+    <Content Include="images\imagesNew\submit.png" />
+    <Content Include="images\imagesNew\upon_first_login_02.png" />
+    <Content Include="images\imagesNew\username.png" />
+    <Content Include="images\imagesNew\vitality_welcomw.png" />
+    <Content Include="images\images\upon_first_login_01.png" />
+    <Content Include="images\images\upon_first_login_02.png" />
+    <Content Include="images\index_bg.png" />
+    <Content Include="images\index_top.png" />
+    <Content Include="images\individual.png" />
+    <Content Include="images\indivisual.png" />
+    <Content Include="images\input_bg.png" />
+    <Content Include="images\input_bg_reg.png" />
+    <Content Include="images\ins1.png" />
+    <Content Include="images\ins2.png" />
+    <Content Include="images\ins3.png" />
+    <Content Include="images\ins4.png" />
+    <Content Include="images\inspirators.png" />
+    <Content Include="images\inspirators_icon.png" />
+    <Content Include="images\invite.png" />
+    <Content Include="images\invite_icon.png" />
+    <Content Include="images\invite_thru_email_icon.png" />
+    <Content Include="images\kudos_icon.png" />
+    <Content Include="images\left_arrow.jpg" />
+    <Content Include="images\left_arrow_date.png" />
+    <Content Include="images\left_img_home.jpg" />
+    <Content Include="images\left_text.png" />
+    <Content Include="images\like_str.jpg" />
+    <Content Include="images\list.png" />
+    <Content Include="images\list1.png" />
+    <Content Include="images\loader.gif" />
+    <Content Include="images\lock.png" />
+    <Content Include="images\lock_pass.png" />
+    <Content Include="images\login.png" />
+    <Content Include="images\loginnew.png" />
+    <Content Include="images\login_bg.png" />
+    <Content Include="images\login_box.png" />
+    <Content Include="images\login_btn.png" />
+    <Content Include="images\login_btnadmin.png" />
+    <Content Include="images\login_googleplus.png" />
+    <Content Include="images\login_input.jpg" />
+    <Content Include="images\login_wellogic.png" />
+    <Content Include="images\Logo.jpg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\logout.png" />
+    <Content Include="images\logo_mission.png" />
+    <Content Include="images\logo_one.png" />
+    <Content Include="images\logo_top.png" />
+    <Content Include="images\log_activity.png" />
+    <Content Include="images\m.png" />
+    <Content Include="images\main-red-bg.gif" />
+    <Content Include="images\member.jpg" />
+    <Content Include="images\members.jpg" />
+    <Content Include="images\members_heading_bg.gif" />
+    <Content Include="images\member_listing.png" />
+    <Content Include="images\member_listing_hover_da.png" />
+    <Content Include="images\member_regis.png" />
+    <Content Include="images\member_registration.png" />
+    <Content Include="images\member_regis_hover_da.png" />
+    <Content Include="images\meni.png" />
+    <Content Include="images\meni1.png" />
+    <Content Include="images\menil.png" />
+    <Content Include="images\menu_activity.png" />
+    <Content Include="images\menu_img.png" />
+    <Content Include="images\menu_img_hover.gif" />
+    <Content Include="images\menu_img_hover.png" />
+    <Content Include="images\Messages-icon.png" />
+    <Content Include="images\mi.png" />
+    <Content Include="images\mid_bread.png" />
+    <Content Include="images\mid_seprator.png" />
+    <Content Include="images\mid_wt.png" />
+    <Content Include="images\minus.png" />
+    <Content Include="images\minus1.png" />
+    <Content Include="images\minus22 %281%29.png" />
+    <Content Include="images\minus22 %282%29.png" />
+    <Content Include="images\mision_thumb1.png" />
+    <Content Include="images\mision_thumb4.png" />
+    <Content Include="images\mision_thumb5.png" />
+    <Content Include="images\mision_thumb6.png" />
+    <Content Include="images\mision_thumb7.png" />
+    <Content Include="images\mision_thumb8.png" />
+    <Content Include="images\mission-info.png" />
+    <Content Include="images\mission.jpeg" />
+    <Content Include="images\mission.jpg" />
+    <Content Include="images\mission.png" />
+    <Content Include="images\mission1.jpg" />
+    <Content Include="images\missions_icon.gif" />
+    <Content Include="images\mission_mail.png" />
+    <Content Include="images\mission_pro.png" />
+    <Content Include="images\mission_settings.png" />
+    <Content Include="images\mission_tab.png" />
+    <Content Include="images\mission_tab_bg.png" />
+    <Content Include="images\mission_tab_hover.png" />
+    <Content Include="images\mission_thumb2.png" />
+    <Content Include="images\mission_thumb3.png" />
+    <Content Include="images\mix_bar.png" />
+    <Content Include="images\motivators_icon.gif" />
+    <Content Include="images\movement_icon.png" />
+    <Content Include="images\msg.png" />
+    <Content Include="images\my_jam.png" />
+    <Content Include="images\nav_bar.png" />
+    <Content Include="images\nav_bar_sel.png" />
+    <Content Include="images\nav_left_rnd.gif" />
+    <Content Include="images\newstyle.css" />
+    <Content Include="images\notes-page-v1.jpg" />
+    <Content Include="images\notes-page-v2.jpg" />
+    <Content Include="images\notes-page1.jpg" />
+    <Content Include="images\notes-page2.jpg" />
+    <Content Include="images\notes-page3.jpg" />
+    <Content Include="images\notes-page4.jpg" />
+    <Content Include="images\notes-page5.jpg" />
+    <Content Include="images\notes-page6.jpg" />
+    <Content Include="images\notes-page7.jpg" />
+    <Content Include="images\notes.png" />
+    <Content Include="images\nothanks.jpg" />
+    <Content Include="images\notification.png" />
+    <Content Include="images\notifications.png" />
+    <Content Include="images\notifocation.png" />
+    <Content Include="images\not_filled.png" />
+    <Content Include="images\ok.png" />
+    <Content Include="images\online-icon.png" />
+    <Content Include="images\oops.png" />
+    <Content Include="images\options.png" />
+    <Content Include="images\outlet_da.png" />
+    <Content Include="images\outlet_hover.png" />
+    <Content Include="images\PancakesEggs.png" />
+    <Content Include="images\password.png" />
+    <Content Include="images\Pencil-icon.png" />
+    <Content Include="images\pendin_thumb_bg.jpg" />
+    <Content Include="images\persn.jpg" />
+    <Content Include="images\person1.png" />
+    <Content Include="images\person2.png" />
+    <Content Include="images\physician_circle_icon.png" />
+    <Content Include="images\pitch_bar.png" />
+    <Content Include="images\Places-mail-message-icon.png" />
+    <Content Include="images\please_wait %282%29.gif" />
+    <Content Include="images\please_wait.gif" />
+    <Content Include="images\plus.png" />
+    <Content Include="images\plus1.png" />
+    <Content Include="images\pluss.png" />
+    <Content Include="images\plus_sign.png" />
+    <Content Include="images\pop_up.png" />
+    <Content Include="images\postJournal.png" />
+    <Content Include="images\previous_arrow.png" />
+    <Content Include="images\Privacy.png" />
+    <Content Include="images\private.gif" />
+    <Content Include="images\private.png" />
+    <Content Include="images\product_bg_ac.gif" />
+    <Content Include="images\product_ma.png" />
+    <Content Include="images\product_ma_hover_da.png" />
+    <Content Include="images\profile.png" />
+    <Content Include="images\progress.png" />
+    <Content Include="images\progress1.png" />
+    <Content Include="images\progress2.png" />
+    <Content Include="images\progressbar.png" />
+    <Content Include="images\progressimage.gif" />
+    <Content Include="images\progress_bar.png" />
+    <Content Include="images\progress_bar1.png" />
+    <Content Include="images\public.png" />
+    <Content Include="images\ratingStarEmpty.gif" />
+    <Content Include="images\ratingStarFilled.gif" />
+    <Content Include="images\ratingStarSaved.gif" />
+    <Content Include="images\rds_da.png" />
+    <Content Include="images\rds_da_hover.png" />
+    <Content Include="images\red_arrow.png" />
+    <Content Include="images\region_da.png" />
+    <Content Include="images\region_da_hover.png" />
+    <Content Include="images\registernow.png" />
+    <Content Include="images\register_white.png" />
+    <Content Include="images\reject.png" />
+    <Content Include="images\relogin.png" />
+    <Content Include="images\reset_pass.png" />
+    <Content Include="images\rgt_arrow.png" />
+    <Content Include="images\rgt_arrow_date.png" />
+    <Content Include="images\right_arrow.jpg" />
+    <Content Include="images\right_btn.png" />
+    <Content Include="images\right_side_text.png" />
+    <Content Include="images\rnd_bread_left.png" />
+    <Content Include="images\rnd_bread_right.png" />
+    <Content Include="images\rnd_mid_wt_left.png" />
+    <Content Include="images\rnd_mid_wt_right.png" />
+    <Content Include="images\rose.jpg" />
+    <Content Include="images\sad.png" />
+    <Content Include="images\sap_bar_mission.png" />
+    <Content Include="images\save_btn_bg.png" />
+    <Content Include="images\scope_mission.png" />
+    <Content Include="images\search.jpg" />
+    <Content Include="images\search.png" />
+    <Content Include="images\search1.png" />
+    <Content Include="images\second.jpg" />
+    <Content Include="images\sel_hob.png" />
+    <Content Include="images\sel_not_bg.png" />
+    <Content Include="images\sel_tab.png" />
+    <Content Include="images\send-_req.png" />
+    <Content Include="images\send-_req11.png" />
+    <Content Include="images\send_feedback.png" />
+    <Content Include="images\send_inv.png" />
+    <Content Include="images\sep.png" />
+    <Content Include="images\seprator.png" />
+    <Content Include="images\server-error-icon.png" />
+    <Content Include="images\settings.png" />
+    <Content Include="images\settings_icon.png" />
+    <Content Include="images\shadow-bg.png" />
+    <Content Include="images\shadow_btm_login.png" />
+    <Content Include="images\shadow_sec_menu.png" />
+    <Content Include="images\shadow_top_login.png" />
+    <Content Include="images\sh_login_left.png" />
+    <Content Include="images\sidebar_first_bg.gif" />
+    <Content Include="images\sidebar_rnd_btm_bg.gif" />
+    <Content Include="images\sidebar_rnd_btm_bg_sec.gif" />
+    <Content Include="images\sidebar_rnd_btm_left.gif" />
+    <Content Include="images\sidebar_rnd_btm_right.gif" />
+    <Content Include="images\sidebar_rnd_top_bg.gif" />
+    <Content Include="images\sidebar_rnd_top_bg_sec.gif" />
+    <Content Include="images\sidebar_rnd_top_left.gif" />
+    <Content Include="images\sidebar_rnd_top_right.gif" />
+    <Content Include="images\sidebar_second_bg.gif" />
+    <Content Include="images\sidernd_btm_left_sec.gif" />
+    <Content Include="images\sidernd_btm_right_sec.gif" />
+    <Content Include="images\sidernd_top_left_sec.gif" />
+    <Content Include="images\sidernd_top_right_sec.gif" />
+    <Content Include="images\side_bar.png" />
+    <Content Include="images\Sign-Add-icon.png" />
+    <Content Include="images\Sign-Add-icon1.png" />
+    <Content Include="images\sign_in.png" />
+    <Content Include="images\sign_up.png" />
+    <Content Include="images\skip.jpg" />
+    <Content Include="images\skipbtn.png" />
+    <Content Include="images\small_search.png" />
+    <Content Include="images\small_search_register.png" />
+    <Content Include="images\smart_search_bg.png" />
+    <Content Include="images\smart_search_left.png" />
+    <Content Include="images\smart_search_right.png" />
+    <Content Include="images\smily.png" />
+    <Content Include="images\spacer.gif" />
+    <Content Include="images\star-fill.png" />
+    <Content Include="images\star.png" />
+    <Content Include="images\star_icon.png" />
+    <Content Include="images\star_not_sel.png" />
+    <Content Include="images\star_sel.png" />
+    <Content Include="images\submit.gif" />
+    <Content Include="images\submit.png" />
+    <Content Include="images\submit_forgot.jpg" />
+    <Content Include="images\support.png" />
+    <Content Include="images\take.jpg" />
+    <Content Include="images\target.png" />
+    <Content Include="images\target1.png" />
+    <Content Include="images\text_box.png" />
+    <Content Include="images\thumb.jpg" />
+    <Content Include="images\thumb.png" />
+    <Content Include="images\thumb2.png" />
+    <Content Include="images\thumbs_up.png" />
+    <Content Include="images\thumb_color.png" />
+    <Content Include="images\thumb_color1.png" />
+    <Content Include="images\thumb_color2.png" />
+    <Content Include="images\thumb_img.png" />
+    <Content Include="images\tick.png" />
+    <Content Include="images\tick_chk.png" />
+    <Content Include="images\tier_da.png" />
+    <Content Include="images\tier_da_hover.png" />
+    <Content Include="images\tools_icon.png" />
+    <Content Include="images\top_cities_da.png" />
+    <Content Include="images\top_cities_da_hover.png" />
+    <Content Include="images\trackhistory.png" />
+    <Content Include="images\Tracking.png" />
+    <Content Include="images\trainer_da.png" />
+    <Content Include="images\trainer_da_hover.png" />
+    <Content Include="images\training_da.png" />
+    <Content Include="images\training_da_hover.png" />
+    <Content Include="images\transparent.png" />
+    <Content Include="images\treats_icon.png" />
+    <Content Include="images\twitter.png" />
+    <Content Include="images\u1.jpg" />
+    <Content Include="images\u2.jpg" />
+    <Content Include="images\upon_first_login.png" />
+    <Content Include="images\upon_first_login_01.png" />
+    <Content Include="images\upon_first_login_02.png" />
+    <Content Include="images\user_avatar.jpg" />
+    <Content Include="images\user_avatar_s.jpg" />
+    <Content Include="images\user_id.png" />
+    <Content Include="images\user_profile.png" />
+    <Content Include="images\vb.png" />
+    <Content Include="images\vedio_tour.jpg" />
+    <Content Include="images\veryhappy.png" />
+    <Content Include="images\view_detail_icon.png" />
+    <Content Include="images\warning.png" />
+    <Content Include="images\well.png" />
+    <Content Include="images\white_box_bg.png" />
+    <Content Include="images\work_circle_icon.png" />
+    <Content Include="images\yellow_bar.png" />
+    <Content Include="includes\jquery.ticker.js" />
+    <Content Include="includes\site.js" />
+    <Content Include="InvitationEmail.htm" />
+    <Content Include="jquery.flexslider-min.js" />
+    <Content Include="js\accordion.js" />
+    <Content Include="js\core.js" />
+    <Content Include="js\effects.js" />
+    <Content Include="js\ins_jscrollpane.css" />
+    <Content Include="js\ins_jscrollpane.min.js" />
+    <Content Include="js\jquery-1.8.0.min.js" />
+    <Content Include="js\jquery.flexslider-min.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jscrollpane.css" />
+    <Content Include="js\jscrollpane.min.js" />
+    <Content Include="js\mission_jscrollpane.css" />
+    <Content Include="js\mission_jscrollpane.min.js" />
+    <Content Include="js\prototype.js" />
+    <Content Include="js\Scroll.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="MobileAPI\AlereVitalityMobileAPI.asmx" />
+    <Content Include="privacyandpolicy.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="scripts\AC_RunActiveContent.js" />
+    <Content Include="scripts\custom.js" />
+    <Content Include="scripts\index.js" />
+    <Content Include="scripts\jquery-1.2.6.js" />
+    <Content Include="scripts\jquery-1.3.2.min.js" />
+    <Content Include="scripts\jquery-1.7.1.min.js" />
+    <Content Include="scripts\jquery.js" />
+    <Content Include="scripts\jquery.ticker.js" />
+    <Content Include="scripts\JScript.js" />
+    <Content Include="scripts\md5.js" />
+    <Content Include="scripts\sendemail.js" />
+    <Content Include="scripts\site.js" />
+    <Content Include="scripts\tooltip.js" />
+    <Content Include="Service\alereimpactservice.asmx" />
+    <Content Include="Service\FoodEssentialAPI.asmx" />
+    <Content Include="SiteMaster.Master" />
+    <Content Include="RegistrationThanks.aspx" />
+    <Content Include="styles\style.css" />
+    <Content Include="styles\ticker-style.css" />
+    <Content Include="support.aspx" />
+    <Content Include="termsandconditions.aspx" />
+    <Content Include="User\AdminMessagesFront.aspx" />
+    <Content Include="User\APISearch.aspx" />
+    <Content Include="User\CategorySearch.aspx" />
+    <Content Include="User\ChangeCircles.aspx" />
+    <Content Include="User\CircleImages\145_FirstPublicCircle.png" />
+    <Content Include="User\CircleImages\145_InnerCircle.jpg" />
+    <Content Include="User\CircleImages\145_MyPublicCircle.jpg" />
+    <Content Include="User\CircleImages\146_InnerCircle.jpg" />
+    <Content Include="User\CircleImages\173_InnerCircle.jpg" />
+    <Content Include="User\CircleImages\173_Personal Circle.jpg" />
+    <Content Include="User\CircleImages\2_Cicrkdef%24#%24#%40%40%40#!%40%40#.jpg" />
+    <Content Include="User\CircleImages\2_hh###.jpg" />
+    <Content Include="User\CircleImages\2_MyCircle.jpg" />
+    <Content Include="User\CircleImages\2_zAzx.jpg" />
+    <Content Include="User\CircleImages\353_Amrit Circle.jpg" />
+    <Content Include="User\CircleImages\353_InnerCircle.jpg" />
+    <Content Include="User\CircleImages\365_rahul public un.jpg" />
+    <Content Include="User\CircleImages\365_Rahul Unrest.jpg" />
+    <Content Include="User\CircleImages\92_dvfdf bvjhsdgfjh gjhfghj bgjhfgd gbjhgdjhgf gjhgjhg e23736gfds jgfjsdgf7ffbdf guiiugh.png" />
+    <Content Include="User\CircleImages\92_My Personal Circlebcjbjdb bdsjhfjhf cjshfdjsghff.jpg" />
+    <Content Include="User\CircleImages\93_PublicCircle.png" />
+    <Content Include="User\FitBitAccountSettings.aspx" />
+    <Content Include="User\FeedBackAndProblem.aspx" />
+    <Content Include="User\FitBitResponseMessage.aspx" />
+    <Content Include="User\FoodCategoryImages\1_download %281%29.jpg" />
+    <Content Include="User\FoodCategoryImages\1_download.jpg" />
+    <Content Include="User\FoodCategoryImages\1_grocery1.jpg" />
+    <Content Include="User\FoodCategoryImages\1_grocery2.jpg" />
+    <Content Include="User\FoodCategoryImages\1_grocery3.jpg" />
+    <Content Include="User\FoodCategoryImages\1_grocery4.jpg" />
+    <Content Include="User\FoodCategoryImages\1_images.jpg" />
+    <Content Include="User\HTMLPage1.htm" />
+    <Content Include="User\InspiratorImages\146_161_MyProfessionalCircle2.jpg" />
+    <Content Include="User\InspiratorImages\146_164_113012_laughatyourself.jpg" />
+    <Content Include="User\InspiratorImages\146_analytic.png" />
+    <Content Include="User\InspiratorImages\146_help.png" />
+    <Content Include="User\InspiratorImages\146_Images2.jpg" />
+    <Content Include="User\InspiratorImages\146_mi.png" />
+    <Content Include="User\InspiratorImages\146_mision_thumb1.png" />
+    <Content Include="User\InspiratorImages\146_mision_thumb4.png" />
+    <Content Include="User\InspiratorImages\146_mision_thumb5.png" />
+    <Content Include="User\InspiratorImages\146_mision_thumb6.png" />
+    <Content Include="User\InspiratorImages\146_mision_thumb7.png" />
+    <Content Include="User\InspiratorImages\146_mision_thumb8.png" />
+    <Content Include="User\InspiratorImages\146_mission_thumb2.png" />
+    <Content Include="User\InspiratorImages\146_mission_thumb3.png" />
+    <Content Include="User\InviteMembers.aspx" />
+    <Content Include="User\Journal.aspx" />
+    <Content Include="User\Log.aspx" />
+    <Content Include="User\MyProfile.aspx" />
+    <Content Include="User\Notes.aspx" />
+    <Content Include="User\Notifications.aspx" />
+    <Content Include="User\PrivacyAndPolicy.aspx" />
+    <Content Include="User\profile_image\104_ProfilePhoto.jpg" />
+    <Content Include="User\profile_image\149_ProfilePhoto.jpg" />
+    <Content Include="User\profile_image\150_ProfilePhoto.jpg" />
+    <Content Include="User\profile_image\154_ProfilePhoto.jpg" />
+    <Content Include="User\profile_image\96_images.jpg" />
+    <Content Include="User\profile_image\96_ProfilePhoto.jpg" />
+    <Content Include="User\profile_image\99_ProfilePhoto.jpg" />
+    <Content Include="User\profile_image\DefaultInnerCircle.jpg" />
+    <Content Include="User\Progress.aspx" />
+    <Content Include="User\PublicCircles.aspx" />
+    <Content Include="User\SearchMembers.aspx" />
+    <Content Include="User\Support.aspx" />
+    <Content Include="User\TermsAndConditions.aspx" />
+    <Content Include="User\TopselectedCircle.aspx" />
+    <Content Include="User\ucAdminMessagesNew.ascx" />
+    <Content Include="User\ChangeCircles_old.aspx" />
+    <Content Include="User\CircleImages\0_asdwww.jpg" />
+    <Content Include="User\CircleImages\0_Family.jpg" />
+    <Content Include="User\CircleImages\104_Harvinder Office.jpg" />
+    <Content Include="User\CircleImages\104_My New Test Circle.jpg" />
+    <Content Include="User\CircleImages\104_New Test Circle.jpg" />
+    <Content Include="User\CircleImages\104_Test - harvinder.jpg" />
+    <Content Include="User\CircleImages\104_Test Circle - Harvinder.jpg" />
+    <Content Include="User\CircleImages\147_Family.jpg" />
+    <Content Include="User\CircleImages\148_123445.jpg" />
+    <Content Include="User\CircleImages\17_asdasd.jpg" />
+    <Content Include="User\CircleImages\17_asdsad.jpg" />
+    <Content Include="User\CircleImages\17_asdwww.jpg" />
+    <Content Include="User\CircleImages\17_family.jpg" />
+    <Content Include="User\CircleImages\17_fghdfgh.jpg" />
+    <Content Include="User\CircleImages\17_ghghfdgf.jpg" />
+    <Content Include="User\CircleImages\17_new circle.jpg" />
+    <Content Include="User\CircleImages\17_new circleaa.jpg" />
+    <Content Include="User\CircleImages\17_new test ciecle.jpg" />
+    <Content Include="User\CircleImages\17_newfamily.jpg" />
+    <Content Include="User\CircleImages\17_newtest.jpg" />
+    <Content Include="User\CircleImages\17_test circle.jpg" />
+    <Content Include="User\CircleImages\18_asdasd.jpg" />
+    <Content Include="User\CircleImages\18_weqweqwe.jpg" />
+    <Content Include="User\CircleImages\96_Fammily.jpg" />
+    <Content Include="User\CircleImages\96_Harry Family.png" />
+    <Content Include="User\CircleImages\96_images.jpg" />
+    <Content Include="User\CircleImages\96_new.jpg" />
+    <Content Include="User\CircleImages\99_asdasdasd.jpg" />
+    <Content Include="User\CircleImages\99_family.jpg" />
+    <Content Include="User\CircleImages\99_My New Circle - 2.jpg" />
+    <Content Include="User\CircleImages\99_My new Circle 2.jpg" />
+    <Content Include="User\CircleImages\99_My New Circle.jpg" />
+    <Content Include="User\CircleImages\99_New Test Circle.jpg" />
+    <Content Include="User\CircleImages\DefaultInnerCircle.jpg" />
+    <Content Include="User\CirclesNew.aspx" />
+    <Content Include="User\ucAdminPostedMessage.ascx" />
+    <Content Include="User\ucAllCircles.ascx" />
+    <Content Include="User\ucChangePassword.ascx" />
+    <Content Include="User\ucFitBitAccountSettings.ascx" />
+    <Content Include="User\ucFoodEssentials.ascx" />
+    <Content Include="User\ucChangeCircle.ascx" />
+    <Content Include="User\ucCircleList.ascx" />
+    <Content Include="User\ucCirclesNew.ascx" />
+    <Content Include="User\ucFoodLog.ascx" />
+    <Content Include="User\ucInviteMembers.ascx" />
+    <Content Include="User\ucJournal.ascx" />
+    <Content Include="User\ucMemberProfile.ascx" />
+    <Content Include="User\ucMissionGraph.ascx" />
+    <Content Include="User\ucMissionHistory.ascx" />
+    <Content Include="User\ucMissionOptions.ascx" />
+    <Content Include="User\ucMyProfile.ascx" />
+    <Content Include="User\UCNIMNotification.ascx" />
+    <Content Include="User\ucNotification.ascx" />
+    <Content Include="User\ucPrivacySettings.ascx" />
+    <Content Include="User\ucProgressBarCaloriesEaten.ascx" />
+    <Content Include="User\InspiratorImages\104_images1.jpg" />
+    <Content Include="User\InspiratorImages\104_Jellyfish.jpg" />
+    <Content Include="User\InspiratorImages\104_Lighthouse.jpg" />
+    <Content Include="User\InspiratorImages\137_images1.jpg" />
+    <Content Include="User\InspiratorImages\137_Images2.jpg" />
+    <Content Include="User\InspiratorImages\99_Images2.jpg" />
+    <Content Include="User\journal.html" />
+    <Content Include="User\LibraryInspirators.ascx" />
+    <Content Include="User\Missions.aspx" />
+    <Content Include="User\profile_image\MyInnerCircle.jpg" />
+    <Content Include="User\profile_image\profileBlankPhoto.jpg" />
+    <Content Include="User\progress.html" />
+    <Content Include="User\ucAcceptInvitation.ascx" />
+    <Content Include="User\ucFriendInspirator.ascx" />
+    <Content Include="User\ucMemberList.ascx" />
+    <Content Include="User\ucFriendProfile.ascx" />
+    <Content Include="User\ucInspiratorDescription.ascx" />
+    <Content Include="User\ucInspirators.ascx" />
+    <Content Include="User\ucListMissions.ascx" />
+    <Content Include="User\ucMission.ascx" />
+    <Content Include="User\ucMyInspirator.ascx" />
+    <Content Include="User\ucPendingFriendRequests.ascx" />
+    <Content Include="User\ucProgressBar.ascx" />
+    <Content Include="User\ucProgressGraph.ascx" />
+    <Content Include="User\ucProgressGraphs.ascx" />
+    <Content Include="User\ucReportProblem.ascx" />
+    <Content Include="User\ucSearchFriends.ascx" />
+    <Content Include="User\CircleImages\MyDoctorCircle.jpg" />
+    <Content Include="User\CircleImages\MyInnerCircle.jpg" />
+    <Content Include="User\CircleImages\MyProfessionalCircle.jpg" />
+    <Content Include="User\LoginUserMaster.Master" />
+    <Content Include="User\profile_image\facebook.JPG" />
+    <Content Include="User\ucSettingOption.ascx" />
+    <Content Include="User\ucTickets.ascx" />
+    <Content Include="User\ucTrackMission.ascx" />
+    <Content Include="User\ucUserFeedBack.ascx" />
+    <Content Include="User\ucUserProfile.ascx" />
+    <Content Include="User\ucWall.ascx" />
+    <Content Include="User\FriendProfile.aspx" />
+    <Content Include="ChangePassword.aspx" />
+    <Content Include="ForgotPassword1.aspx" />
+    <Content Include="User\PendingFriendRequests.aspx" />
+    <Content Include="User\MemberList.aspx" />
+    <Content Include="RegistrationThanks1.aspx" />
+    <Content Include="User\Inspirators.aspx" />
+    <Content Include="ForgotPasswordThank.aspx" />
+    <None Include="images\images\Thumbs.db" />
+    <Content Include="images\LoginUserMaster.Master" />
+    <None Include="images\Tata Photon+.lnk" />
+    <None Include="images\Thumbs.db" />
+    <None Include="styles\font\League_Gothic-webfont.eot" />
+    <None Include="styles\font\League_Gothic-webfont.svg" />
+    <None Include="styles\font\League_Gothic-webfont.ttf" />
+    <None Include="styles\font\League_Gothic-webfont.woff" />
+    <None Include="Web References\alereimpactservice\alereimpactservice.disco" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\alereimpactservice\alereimpactservice.wsdl" />
+    <None Include="Web References\alereimpactservice\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:65117/Service/alereimpactservice.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\alereimpactservice\</RelPath>
+      <UpdateFromURL>http://localhost:65117/Service/alereimpactservice.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ALEREIMPACT_alereimpactservice_alereimpactservice</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MobileAPI\AlereVitalityMobileAPI.asmx.resx">
+      <DependentUpon>AlereVitalityMobileAPI.asmx.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="User\NotesImages\" />
+    <Folder Include="User\PersonalizationImages\" />
+    <Folder Include="User\ReportErrorImages\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>15692</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

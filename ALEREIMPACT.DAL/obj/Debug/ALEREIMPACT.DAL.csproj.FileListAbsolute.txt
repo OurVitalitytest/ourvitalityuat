@@ -1,0 +1,30 @@
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT.DAL\obj\Debug\ResolveAssemblyReference.cache
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT.DAL\bin\Debug\ALEREIMPACT.DAL.dll
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT.DAL\bin\Debug\ALEREIMPACT.DAL.pdb
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT.DAL\bin\Debug\ALEREIMPACT.FRAMEWORK.dll
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT.DAL\bin\Debug\Elmah.dll
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT.DAL\bin\Debug\ALEREIMPACT.FRAMEWORK.pdb
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT.DAL\bin\Debug\ALEREIMPACT.BAL.pdb
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT.DAL\obj\Debug\ALEREIMPACT.DAL.dll
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT.DAL\obj\Debug\ALEREIMPACT.DAL.pdb
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT.DAL\bin\Debug\ALEREIMPACT.BAL.dll
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT.DAL\bin\Debug\ALEREIMPACT.DAL.dll
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT.DAL\bin\Debug\ALEREIMPACT.DAL.pdb
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT.DAL\bin\Debug\ALEREIMPACT.BAL.dll
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT.DAL\bin\Debug\ALEREIMPACT.FRAMEWORK.dll
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT.DAL\bin\Debug\Elmah.dll
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT.DAL\bin\Debug\ALEREIMPACT.FRAMEWORK.pdb
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT.DAL\bin\Debug\ALEREIMPACT.BAL.pdb
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT.DAL\obj\Debug\ResolveAssemblyReference.cache
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT.DAL\obj\Debug\ALEREIMPACT.DAL.dll
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT.DAL\obj\Debug\ALEREIMPACT.DAL.pdb
+D:\ALEREIMPACT\ALEREIMPACT.DAL\bin\Debug\ALEREIMPACT.DAL.dll
+D:\ALEREIMPACT\ALEREIMPACT.DAL\bin\Debug\ALEREIMPACT.DAL.pdb
+D:\ALEREIMPACT\ALEREIMPACT.DAL\bin\Debug\ALEREIMPACT.BAL.dll
+D:\ALEREIMPACT\ALEREIMPACT.DAL\bin\Debug\ALEREIMPACT.FRAMEWORK.dll
+D:\ALEREIMPACT\ALEREIMPACT.DAL\bin\Debug\Elmah.dll
+D:\ALEREIMPACT\ALEREIMPACT.DAL\bin\Debug\ALEREIMPACT.FRAMEWORK.pdb
+D:\ALEREIMPACT\ALEREIMPACT.DAL\bin\Debug\ALEREIMPACT.BAL.pdb
+D:\ALEREIMPACT\ALEREIMPACT.DAL\obj\Debug\ResolveAssemblyReference.cache
+D:\ALEREIMPACT\ALEREIMPACT.DAL\obj\Debug\ALEREIMPACT.DAL.dll
+D:\ALEREIMPACT\ALEREIMPACT.DAL\obj\Debug\ALEREIMPACT.DAL.pdb

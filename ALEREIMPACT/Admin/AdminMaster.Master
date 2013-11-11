@@ -1,0 +1,186 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs"
+    Inherits="ALEREIMPACT.Admin.AdminMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ALERE</title>
+   
+    <link href="../CSS/AdminStyle.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+   <%-- <script type="text/javascript">
+     function GetUserdata()
+      {
+     
+    // window .location="AdminLinkExcelData.aspx";
+     alert ('1');
+            document.getElementById('<%#IFrmLnk.ClientID %>').src = "AdminLinkExcelData.aspx";
+            //<%#IFrmLnk.ClientID %>
+            alert ('2');
+        }
+    </script>--%>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="main_wraper">
+        <div id="main_body">
+            <div id="header">
+                <div id="logo_top">
+                    <a href="AdminDashboard.aspx" style="font-size: 21px; font-weight: bold;">VITALITY</a></div>
+                <div id="header_welcome">
+                    <ul>
+                        <li>Welcome&nbsp;: &nbsp;Admin</li>&nbsp;
+                        <li>
+                            <asp:LinkButton ID="LinkButton1" runat="server" Text="Change Password" OnClick="LinkButton1_Click"
+                                Style="color: #31A5A0;"></asp:LinkButton></li>|
+                        <li><a href="AdminLogin.aspx" class="txt_blue" title="Logout">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="main_dashborad" style="padding-bottom: 36px !important;">
+                    <div class="dashborad_haed">
+                        <a href="AdminDashboard.aspx" style="color: #fff; text-decoration: none; font-size: 22px;">
+                            Dashboard</a>
+                    </div>
+                    <div class="first_box_dash" style=" height: 208px;">
+                        <div class="img_thumb">
+                            <img alt="" src="../images/user_profile.png" /></div>
+                        <div class="img_thumb_head">
+                            User Management</div>
+                        <div class="img_thumb">
+                            <asp:LinkButton ID="lnkUser" runat="server" OnClick="lnkUser_Click">User Management</asp:LinkButton></div>
+                        <div class="img_thumb">
+                            <asp:LinkButton ID="lnkGroup" runat="server" OnClick="lnkGroup_Click">Group Management</asp:LinkButton></div>
+                        <div class="img_thumb">
+                            <asp:LinkButton ID="lnkInvite" runat="server" OnClick="lnkInvite_Click">User Invitations</asp:LinkButton>
+                        </div>
+                        <div class="img_thumb">
+                            <asp:LinkButton ID="lnkCircle" runat="server" OnClick="lnkCircle_Click">Circle Management</asp:LinkButton></div>
+                    </div>
+                    <div class="first_box_dash" style=" height: 208px;">
+                        <div class="img_thumb">
+                            <img alt="" src="../images/mission_pro.png" /></div>
+                        <div class="img_thumb_head">
+                            Inspirators</div>
+                        <div class="img_thumb">
+                            <asp:LinkButton ID="lnkInsp" runat="server" OnClick="lnkInsp_Click">Inspirator Management</asp:LinkButton></div>
+                        <div class="img_thumb">
+                            <label style="color: #999999 !important; font-size: 13px;">
+                                API Links</label></div>
+                        <div class="img_thumb">
+                            <label style="color: #999999 !important; font-size: 13px;">
+                                Create an API</label></div>
+                    </div>
+                    <div class="first_box_dash" style=" height: 208px;">
+                        <div class="img_thumb">
+                            <img alt="" src="../images/mission.jpg" /></div>
+                        <div class="img_thumb_head">
+                            Mission</div>
+                        <div class="img_thumb">
+                            <asp:LinkButton ID="lnkMission" runat="server" OnClick="lnkMission_Click">Mission Management</asp:LinkButton></div>
+                        <div class="img_thumb">
+                            <label style="color: #999999 !important; font-size: 13px;">
+                                Messages</label></div>
+                        <div class="img_thumb">
+                            <label style="color: #999999 !important; font-size: 13px;">
+                                Triggers/Rules</label></div>
+                        <div class="img_thumb">
+                            <asp:LinkButton ID="lnkMoodAnalytics" runat="server" OnClick="lnkMoodAnalytics_Click">Mood Analytics</asp:LinkButton></div>
+                    </div>
+                    <div class="first_box_dash" style=" height: 208px;">
+                        <div class="img_thumb">
+                            <img alt="" src="../images/analytic.png" /></div>
+                        <div class="img_thumb_head">
+                            Analytics</div>
+                        <div class="img_thumb">
+                            <label style="color: #999999 !important; font-size: 13px;">
+                                Usage Stats</label></div>
+                        <div class="img_thumb">
+                            <asp:LinkButton ID="lnkHeathstats" runat="server" OnClick="lnkHeathstats_Click"> 
+    Health Stats</asp:LinkButton></div>
+                        <div class="img_thumb">
+                            <asp:LinkButton ID="lnkAnalytics" runat="server" OnClick="lnkAnalytics_Click"> User Analytics</asp:LinkButton>
+                        </div>
+                        <div class="img_thumb">
+                            <asp:LinkButton ID="lnkAddCategory" runat="server" OnClick="lnkAddCategory_Click">Add Food Categories</asp:LinkButton>
+                        </div>
+                    </div>
+                    <div class="first_box_dash" style=" height: 208px;">
+                        <div class="img_thumb">
+                            <img alt="" src="../images/help.png" /></div>
+                        <div class="img_thumb_head">
+                            Help Desk</div>
+                        <div class="img_thumb">
+                            <asp:LinkButton ID="lnkError" runat="server" OnClick="lnkError_Click">  Error Log</asp:LinkButton></div>
+                        <div id="divCount" style="background-color: red; color: white; float: right; height: 15px;
+                            margin-right: 52px; margin-top: -17px; padding-left: 5px; width: 12px;" runat="server">
+                            <asp:Label ID="lbCountER" runat="server" Text=""></asp:Label></div>
+                        <div class="img_thumb">
+                            <asp:LinkButton ID="lnkFlag" runat="server" OnClick="lnkFlag_Click">Flags</asp:LinkButton></div>
+                        <div class="img_thumb">
+                            <asp:LinkButton ID="lnkMessageD" runat="server" OnClick="lnkMessageD_Click">Messages Detail</asp:LinkButton></div>
+                        <div class="img_thumb">
+                            <asp:LinkButton ID="lnkFeedBAck" runat="server" OnClick="lnkFeedBAck_Click"> Feedback/Tickets</asp:LinkButton></div>
+                        <div id="divFeed" runat="server" style="float: right; margin-right: 35px; margin-top: -18px;">
+                            <asp:Image ID="Image1" runat="server" Style="height: 10px; width: 10px;" ImageUrl="~/images/ballon-icon.png" />
+                        </div>
+                    </div>
+                    <div class="first_box_dash" style=" height: 208px;">
+                        <div class="img_thumb" >
+                        <asp:LinkButton ID="LnkUsersStats" runat ="server"  style =" height: 90px;" OnClick="LnkUsersStats_Click">
+                         <img alt="" src="../images/export.png" />
+                         </asp:LinkButton> 
+                          
+                            </div>
+                        <div class="img_thumb_head">
+                            Users Statistic Data</div>
+                       
+                        <div class="img_thumb">
+                            <asp:LinkButton ID="lnkBtnExportUserDetails" runat="server" OnClick="lnkExportUserDetails_Click">
+                                Personal Details
+                            </asp:LinkButton>
+                        </div>
+                        <div class="img_thumb">
+                            <asp:LinkButton ID="lnkBtnLog" runat="server" OnClick="lnkBtnLog_Click">
+                                Users  Log
+                            </asp:LinkButton>
+                        </div>
+                        
+                        <div class="img_thumb">
+                            <asp:LinkButton ID="lnkFoodLog" runat="server" OnClick="lnkFoodLog_Click">
+                                Food Log
+                            </asp:LinkButton>
+                        </div>
+                         <div class="img_thumb">
+                            <asp:LinkButton ID="lnkBtnMissions" runat="server" OnClick="lnkBtnMissions_Click">
+                                Missions
+                            </asp:LinkButton>
+                        </div>
+                         <div class="img_thumb">
+                            <asp:LinkButton ID="lnkExportAll" runat="server" OnClick="lnkExportAll_Click">
+                                Export All
+                            </asp:LinkButton>
+                        </div>
+                         </div>
+                        <div >
+                   
+                    <div style="float: left; width: 998px; background: #eee;">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="footer_area">
+            </div>
+        </div>
+    </div>
+    </div>
+    </form>
+</body>
+</html>

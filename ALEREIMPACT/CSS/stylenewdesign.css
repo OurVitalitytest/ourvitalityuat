@@ -1,0 +1,347 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body{  background:#efefef; float:left; width:100%;}
+.header_miss{ background:url(../images/header.png) repeat; height:96px; float:left; width:100%;}
+
+.drop_miss {
+    background: url("../images/drop_down.png") repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    float: right;
+    font-family: arial;
+    font-size: 12px;
+    height: 22px;
+    padding-left: 24px;
+    padding-top: 6px;
+    width: 145px;
+}
+#MissionsGraphs_dvChart{ border: 1px solid #EEEEEE;
+    margin-left: 23px;
+     width: 930px !important;}
+
+#MissionsGraphs_LineChart1 #MissionsGraphs_LineChart1__ParentDiv {    border: 1px solid #ccc !important;    margin-left: 23px !important;    overflow: auto;    width: 928px;}
+#MissionsGraphs_LineChart2__ParentDiv{  border: 1px solid #CCCCCC !important;}
+.sep_miss {
+    background: url("../images/seprator.png") repeat scroll 0 0 transparent;
+    float: right;
+    height: 18px;
+    margin-top: 5px;
+    width: 13px;
+}
+.setting_miss {
+  
+    float: right;
+    height: 22px;
+    margin-top: 3px;
+    width: 24px;
+}
+
+.msg_miss {
+    background: url("../images/msg.png") repeat scroll 0 0 transparent;
+    float: right;
+    height: 22px;
+    margin-top: 3px;
+    width: 24px;
+}
+.log_miss {
+    background: url("../images/logout.png") repeat scroll 0 0 transparent;
+    float: right;
+    height: 20px;
+    margin-top: 5px;
+    width: 23px;
+}
+.pc_miss {
+    background: url("../images/icon1.png") repeat scroll 0 0 transparent;
+    float: right;
+    height: 22px;
+    margin-left: 50px;
+    margin-top: 4px;
+    width: 24px;
+}
+
+.pop_up_miss {
+    background: url("../images/pop_up.png") repeat scroll 0 0 transparent;
+    height: 27px;
+    margin-left: 897px;
+    margin-top: -9px;
+    position: absolute;
+    width: 27px;
+}
+.profile_miss{ background:url(../images/thumb_img.png); height:67px; width:67px; float:left;}
+
+.name_miss {
+    background: url("../images/icon_thumb.png") repeat scroll 0 0 transparent;
+    float: left;
+    height: 11px;
+    margin-left: 12px;
+    margin-top: 11px;
+    width: 12px;
+}
+
+.manepersn_miss {
+    color: red;
+    float: left;
+    font-family: arial;
+    font-size: 18px;
+    margin-left: 4px;
+    margin-top: 6px;
+}
+.search_miss{  width:170px; height:30px; float:right;}
+
+.main_cont_miss {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    float: left;
+	padding-bottom:15px;
+    margin-top: 20px;
+    width: 975px;
+}
+.sep_miss{ background:url(../images/seprator.png); float:right; width:10px; height:18px;}
+
+.head_btm_miss {
+    float: left;
+    margin-top: 13px;
+    width: 100%;
+}
+.righttop_miss{ margin-top:10px;}
+
+
+.footer_miss {
+    width: 100%;
+}
+.main_btm_miss{ width:100%; float:left;}
+.cont_miss{ width:980px; margin:10px auto;}
+
+.navi_miss {
+    float: left;
+    list-style: none outside none;
+}
+.nav_list_miss {
+    color: #34495E;
+    float: left;
+    font-family: arial;
+    list-style: none outside none;
+    margin-top: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 128px;
+}
+.sel_miss {
+    border-bottom: 6px solid #4DA3A4;
+    color: #338C8D;
+    margin-left: 6px;
+    padding-bottom: 12px;
+    padding-left: 0;
+}
+.top_his_miss{ border-bottom:1px solid #ccc; padding-bottom:26px; width:950px; margin:15px auto; color:#666666;}
+.bread_miss{ float:left;  font-family: arial; font-size:12px; color:#666666;}
+.golist_miss{ float:right ;  font-family: arial; font-size:12px; color:#666666;}
+.mission_miss { float:left;  font-family: arial; font-size:12px; color:#666666;}
+
+.arrow_miss {
+    color: #666666;
+    float: left;
+    font-family: arial;
+    font-size: 12px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top:3px;
+}
+
+.go_miss {
+    color: #666666;
+    float: left;
+    font-family: arial;
+    font-size: 14px;
+    margin-right: 5px;
+}
+.go_miss{ float:left;  font-family: arial; font-size:14px; color:#666666;}
+
+.left_miss {
+    float: left;
+    margin-top: 35px;
+    width: 690px;
+}
+.left_miss_graph
+{
+    float: left;
+    margin-top: 35px;
+    width: 340px;
+}
+
+
+.left_gray_miss {
+    background: none repeat scroll 0 0 #F2F2F0;
+    border-bottom: 1px solid #FFFFFF;
+    height: 35px;
+}
+
+
+.left_gray_miss_graph {
+    background: none repeat scroll 0 0 #F2F2F0;
+    border-bottom: 1px solid #FFFFFF;
+    height: 35px;
+    width:698px;
+}
+
+.green_miss{ float:left; width:auto;    height: 35px; margin-left: 35px;}
+.green_miss_graph{float:left; width:698px;    height: 35px;margin-left: 35px;}
+
+.name_des_miss {
+    color: #333333;
+    float: left;
+    font-family: arial;
+    font-size: 14px;
+    margin-left: 12px;
+    margin-top: 8px;
+     margin-right: 12px;
+}
+.yellow_miss{ background:#f1c50e; width:260px;    height: 35px; margin-left: 35px;}
+.yellow_miss_graph{width:260px;    height: 35px;margin-left: 35px;}
+
+.orange_miss{ width:260px;    height: 35px; margin-left: 35px;}
+.orange_miss_graph{width:260px;    height: 35px;margin-left: 35px;}
+
+.green_miss img, .yellow_miss img, .orange_miss img {
+    float: left;
+    margin-left: 5px;
+    margin-top: 7px;
+}
+
+.rgt_miss {
+    float: left;
+    margin-top: 32px;
+    width: 250px;
+}
+
+.submit_miss {
+    background: none repeat scroll 0 0 #56BDD2;
+    border: 1px solid #359DB2;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 2px 1px #CCCCCC;
+    color: #FFFFFF;
+    float: left;
+    font-family: arial;
+    font-size: 20px;
+    margin-left: 19px;
+    padding-bottom: 7px;
+    padding-top: 6px;
+    text-align: center;
+    width: 230px;
+}
+
+.check_miss {
+    background: none repeat scroll 0 0 #D44937;
+    border: 1px solid #AF3121;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 2px 1px #CCCCCC;
+    color: #FFFFFF;
+    float: left;
+    font-family: arial;
+    font-size: 20px;
+    margin-left: 19px;
+    margin-top: 14px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    text-align: center;
+    width: 230px;
+    cursor:pointer;
+}
+
+.table_miss {
+    border: 1px solid #CCCCCC;
+    border-radius: 8px 8px 8px 8px;
+    float: left;
+    margin: 30px auto 10px 13px;
+    overflow: hidden;
+    width: 945px;
+}
+.top_blue_miss {
+    background: none repeat scroll 0 0 #34495E;
+    float: left;
+    width: 98%;
+    margin-left:3px;
+     border-radius: 8px 8px 0 0;
+}
+
+			
+	
+.left_blue_miss {
+    float: left;
+}
+.rgt_blue_miss {
+    float: right;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    margin-top: 4px;
+}
+
+.box_miss {
+    color: #FFFFFF;
+    float: left;
+    font-family: arial;
+    font-size: 13px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    text-align: center;
+    width: 20%;
+}
+.box_miss img{ margin-left:10px;}
+.top_green_miss img{ margin-left:10px;}
+.top_gray_miss img{ margin-left:10px;}
+.top_pitch_miss img{ margin-left:10px;}
+
+
+.top_gray_miss .box_miss{color:#666666;}
+.top_pitch_miss .box_miss{color:#666666;}
+
+.top_green_miss{ background: none repeat scroll 0 0 #4da3a4;
+    float: left;
+    width: 100%;}
+	
+.top_gray_miss{ background: none repeat scroll 0 0 #fbfbfb;
+    float: left;
+    width: 100%;}
+	
+.top_pitch_miss{ background: none repeat scroll 0 0 #f2f2f0;
+color:#666666;
+    float: left;
+    width: 100%;}
+.activity_miss {
+    color: #FFFFFF;
+    float: left;
+    font-family: arial;
+    font-size: 15px;
+    margin-top: 7px;
+}
+.clock_miss {
+    float: left;
+    margin: 5px;
+}
+.copyrite_miss{   float: left;    font-family: arial; font-size:12px; margin-top:10px;}
+.privcy_miss{   float:right;    font-family: arial;  font-size:12px; margin-top:10px;}
+.footer_text_miss{ width:980px; margin:0px auto;}
+
+@media (max-width: 1200px) {}

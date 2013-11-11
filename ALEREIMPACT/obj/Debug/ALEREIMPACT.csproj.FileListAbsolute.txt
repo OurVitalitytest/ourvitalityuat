@@ -1,0 +1,73 @@
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT\obj\Debug\ResolveAssemblyReference.cache
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT\obj\Debug\ALEREIMPACT.MobileAPI.AlereVitalityMobileAPI.resources
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT\obj\Debug\ALEREIMPACT.csproj.GenerateResource.Cache
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\ALEREIMPACT.dll
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\ALEREIMPACT.pdb
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\ALEREIMPACT.DAL.dll
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\ALEREIMPACT.FRAMEWORK.dll
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\ASPSnippets.FaceBookAPI.dll
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\Castle.Core.dll
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\Castle.DynamicProxy2.dll
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\Castle.MicroKernel.dll
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\Castle.Windsor.dll
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\CKEditor.NET.dll
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\CommonServiceLocator.WindsorAdapter.dll
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\DotNetOpenAuth.dll
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\Elmah.dll
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\FidbitAPI.DotNETClient.dll
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\Microsoft.Practices.ServiceLocation.dll
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\Newtonsoft.Json.dll
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\OAuth.Net.Common.dll
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\OAuth.Net.Components.dll
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\OAuth.Net.Consumer.dll
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\System.Web.DataVisualization.Design.dll
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\System.Web.DataVisualization.dll
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\ALEREIMPACT.FRAMEWORK.pdb
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\ALEREIMPACT.DAL.pdb
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\ALEREIMPACT.BAL.pdb
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT\obj\Debug\ALEREIMPACT.dll
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT\obj\Debug\ALEREIMPACT.pdb
+D:\Harjeet Working Directory\AlrerVitality\ALEREIMPACT\ALEREIMPACT\bin\ALEREIMPACT.BAL.dll
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT\bin\ALEREIMPACT.dll
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT\bin\ALEREIMPACT.pdb
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT\bin\ALEREIMPACT.BAL.dll
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT\bin\ALEREIMPACT.DAL.dll
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT\bin\ALEREIMPACT.FRAMEWORK.dll
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT\bin\ASPSnippets.FaceBookAPI.dll
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT\bin\Castle.Core.dll
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT\bin\Castle.DynamicProxy2.dll
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT\bin\Castle.MicroKernel.dll
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT\bin\Castle.Windsor.dll
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT\bin\CKEditor.NET.dll
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT\bin\CommonServiceLocator.WindsorAdapter.dll
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT\bin\DotNetOpenAuth.dll
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT\bin\Elmah.dll
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT\bin\FidbitAPI.DotNETClient.dll
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT\bin\Microsoft.Practices.ServiceLocation.dll
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT\bin\Newtonsoft.Json.dll
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT\bin\OAuth.Net.Common.dll
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT\bin\OAuth.Net.Components.dll
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT\bin\OAuth.Net.Consumer.dll
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT\bin\System.Web.DataVisualization.Design.dll
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT\bin\System.Web.DataVisualization.dll
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT\bin\ALEREIMPACT.FRAMEWORK.pdb
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT\bin\ALEREIMPACT.DAL.pdb
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT\bin\ALEREIMPACT.BAL.pdb
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT\obj\Debug\ResolveAssemblyReference.cache
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT\obj\Debug\ALEREIMPACT.MobileAPI.AlereVitalityMobileAPI.resources
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT\obj\Debug\ALEREIMPACT.csproj.GenerateResource.Cache
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT\obj\Debug\ALEREIMPACT.dll
+D:\Harjeet Working Directory\AlereWithoutVSS\ALEREIMPACT\ALEREIMPACT\obj\Debug\ALEREIMPACT.pdb
+D:\ALEREIMPACT\ALEREIMPACT\bin\ALEREIMPACT.dll
+D:\ALEREIMPACT\ALEREIMPACT\bin\ALEREIMPACT.pdb
+D:\ALEREIMPACT\ALEREIMPACT\bin\ALEREIMPACT.BAL.dll
+D:\ALEREIMPACT\ALEREIMPACT\bin\ALEREIMPACT.DAL.dll
+D:\ALEREIMPACT\ALEREIMPACT\bin\ALEREIMPACT.FRAMEWORK.dll
+D:\ALEREIMPACT\ALEREIMPACT\bin\ALEREIMPACT.FRAMEWORK.pdb
+D:\ALEREIMPACT\ALEREIMPACT\bin\ALEREIMPACT.DAL.pdb
+D:\ALEREIMPACT\ALEREIMPACT\bin\ALEREIMPACT.BAL.pdb
+D:\ALEREIMPACT\ALEREIMPACT\obj\Debug\ResolveAssemblyReference.cache
+D:\ALEREIMPACT\ALEREIMPACT\obj\Debug\ALEREIMPACT.MobileAPI.AlereVitalityMobileAPI.resources
+D:\ALEREIMPACT\ALEREIMPACT\obj\Debug\ALEREIMPACT.csproj.GenerateResource.Cache
+D:\ALEREIMPACT\ALEREIMPACT\obj\Debug\ALEREIMPACT.dll
+D:\ALEREIMPACT\ALEREIMPACT\obj\Debug\ALEREIMPACT.pdb

@@ -1,0 +1,362 @@
+.center_food_log {
+    border: 1px solid #eee;
+    border-radius: 4px 4px 4px 4px;
+    margin: 5px auto;
+    width: 970px;
+	overflow:hidden;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	padding:15px;
+	
+	
+}
+
+
+.uppertab_log {
+    float: left;
+    width: 100%;
+}
+
+
+.bg_sel_tab {
+    background: url("../images/sel_not_bg.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    float: left;
+    font-family: arial;
+    font-size: 17px;
+    font-weight: bold;
+    height: 47px;
+    line-height: 36px;
+    text-align: center;
+    width: 80px;
+}
+
+
+.sel_log_tab{background: url("../images/sel_tab.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+	
+	 float: left;
+    font-family: arial;
+    font-size: 17px;
+    font-weight: bold;
+    height: 47px;
+    line-height: 36px;
+    text-align: center;
+    width: 80px;
+	color:#fff}
+
+
+.bottom_tab {
+    float: left;
+    margin-top: 8px;
+    padding: 0;
+    width: 100%;
+}
+
+
+
+.left_section_food_log {
+    background: none repeat scroll 0 0 #F8F6F6;
+    border: 1px solid #EDEDED;
+    float: left;
+    margin-right: 1%;
+    padding: 10px;
+    width: 65%;
+}
+
+
+
+.table_section{}
+
+
+.food_log_bar{}
+
+
+.title_food_bar{}
+
+
+.date_food_bar {
+    float: right;
+    
+}
+
+
+.date_food_bar span {
+    float: left;
+    font-size: 14px;
+    margin: 3px;
+}
+.date_food_bar img {
+    float: left;
+}
+
+.find_food {
+    float: left;
+    padding-left: 5%;
+    width: 43%;
+}
+
+.find_food span {
+    color: #888888;
+    float: left;
+    font-size: 20px;
+    width: 100%;
+}
+
+
+.find_food input {
+    box-shadow: 1px 1px 4px 2px #DDDDDD;
+    height: 34px;
+    margin-top: 5px;
+    width: 94%;
+}
+.find_serving{float: left;
+    width: 20%;}
+
+.find_serving span{ color: #888888;
+    float: left;
+    font-size: 20px;
+    width: 100%;}
+
+.find_serving input{ box-shadow: 1px 1px 4px 2px #DDDDDD;
+    height: 34px;
+    margin-top: 5px;
+    width: 94%;}
+
+
+.find_time {
+    float: left;
+    margin-left: 2%;
+    width: 25%;
+}
+
+
+.find_time span{ color: #888888;
+    float: left;
+    font-size: 20px;
+    width: 100%;}
+
+.find_time select {
+    box-shadow: 1px 2px 4px 2px #DDDDDD;
+    color: #999999;
+    height: 35px;
+    line-height: 33px;
+    margin-top: 5px;
+    padding: 9px 5px;
+    width: 100%;
+}
+
+.select_option_food{}
+.food_log_submit {
+    background: none repeat scroll 0 0 #17A39D;
+    border: medium none;
+    border-radius: 3px 3px 3px 3px;
+    clear: both;
+    color: #FFFFFF;
+    float: left;
+    font-family: arial;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    margin-left: 30px;
+    margin-top: 20px;
+    padding: 6px;
+    cursor:pointer;
+}
+
+
+.table_food_data {
+    border: 1px solid #EEEEEE;
+    margin: 55px auto;
+    overflow: hidden;
+    width: 97%;
+}
+
+.table_food_header { background:url(../images/bg_log.png) repeat-x;
+    float: left;
+    width: 163%;
+	
+}
+
+.food_table_fav {
+    border-right: 1px solid #CCCCCC;
+    color: #666666;
+    float: left;
+    line-height: 42px;
+    padding-left: 2%;
+    width: 70%;
+}
+.food_table {
+    border-right: 1px solid #CCCCCC;
+    color: #666666;
+    float: left;
+    line-height: 42px;
+    padding-left: 2%;
+    width: 46%;
+}
+.fav_table img{  margin-top: 13px;}
+
+.serving_table {
+    border-right: 1px solid #CCCCCC;
+    color: #666666;
+    float: left;
+    line-height: 42px;
+    padding-left: 0;
+    text-align: center;
+    width: 8%;
+}
+
+.cal_table {
+    border-right: 1px solid #CCCCCC;
+    color: #666666;
+    float: left;
+    line-height: 42px;
+    padding-left: 0;
+    text-align: center;
+    width: 6%;
+}
+.cal_table_fav {
+   
+    color: #666666;
+    float: left;
+    line-height: 42px;
+    padding-left: 0;
+    text-align: center;
+    width: 26%;
+}
+
+.fat_table{   float: left;   color: #666666;  line-height: 42px; border-right: 1px solid #CCCCCC;
+  line-height: 42px;
+    padding-left: 0;
+    text-align: center;
+    width: 6%;}
+
+.fiber_table{   float: left;   color: #666666;  border-right: 1px solid #CCCCCC;
+ line-height: 42px;
+    padding-left: 0;
+    text-align: center;
+    width: 6%;}
+
+.carbs_table{   float: left;   color: #666666;  border-right: 1px solid #CCCCCC;
+  line-height: 42px;
+    padding-left: 0;
+    text-align: center;
+    width: 6%;}
+
+.sod_table{   float: left;   color: #666666;  border-right: 1px solid #CCCCCC;
+ line-height: 42px;
+    padding-left: 0;
+    text-align: center;
+    width: 6%;}
+
+.prot_table{   float: left;   color: #666666;  border-right: 1px solid #CCCCCC;
+ line-height: 42px;
+    padding-left: 0;
+    text-align: center;
+    width: 6%;}
+
+.fav_table{   float: left;   color: #666666; 
+ line-height: 42px;
+    padding-left: 0;
+    text-align: center;
+    width: 6%;}
+
+
+.table_food_detail {
+    border-bottom: 1px solid #CCCCCC;
+    
+    width: 100%;
+}
+.table_food_detail:hover {
+    background:#E4FF9D;
+}
+.table_food_detail:last-child{ border-bottom: none;}
+
+.rgt_section_food_log{  background: none repeat scroll 0 0 #F8F6F6;
+    border: 1px solid #EDEDED;
+    float: right;
+ 
+    padding: 10px;
+    width: 28%;}
+
+
+.table_section {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #EEEEEE;
+    margin-bottom: 20px;
+    overflow: hidden;
+    width:100%;
+}
+
+.food_log_bar {
+    float: left;
+
+    width: 100%;
+}
+
+
+.title_food_bar {
+    background: none repeat scroll 0 0 #777777;
+    color: #FFFFFF;
+    float: left;
+    font-size: 17px;
+    padding: 10px;
+    width: 97%;
+}
+.burned_box {
+    background: none repeat scroll 0 0 #F8E1E1;
+    border-bottom: 9px solid #CE5959;
+    color: #CE5959;
+    float: left;
+    font-size: 17px;
+    padding: 14px;
+    text-align: center;
+    width: 38%;
+}
+.burned_box span{}
+
+
+.consumed_box {
+    background: none repeat scroll 0 0 #E1FFE9;
+    border-bottom: 9px solid #24A655;
+    float: left;
+    padding: 14px;  font-size: 17px;
+    width: 41%;
+	   color: #24A655;text-align: center;
+}
+
+.consumed_box span{float: left;
+    font-size: 24px;
+    text-align: center;
+    width: 100%;}
+.burned_box span {
+    color: #CE5959;
+    float: left;
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+}
+
+.link_top_bar {
+    clear: both;
+    color: #888888;
+    float: right;
+    margin-bottom: 12px;
+    margin-right: 9px;
+    margin-top: 5px;
+}
+.link_top_bar a{ text-decoration:none; color:#888}
+.link_top_bar a:hover{ text-decoration:underline;}
+.tooltip_onhover_start{ display:none; font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:21px;}
+.not_sel_star:hover + .tooltip_onhover_start{
+
+    background: none repeat scroll 0 0 #FFF886;
+    border-radius: 6px 6px 6px 6px;
+    color: #000000;
+    display: block;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 3px;
+    position: absolute;
+    width: 65px;
+}
+.not_sel_star{}

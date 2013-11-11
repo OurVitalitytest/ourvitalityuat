@@ -1,0 +1,32 @@
+#bubbles {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+#bubbles div {
+  left: 0;
+  top: 0;
+  display: block;
+  position: absolute;
+  border-radius: 1000px;
+  background-size: 100%;
+}
+.info-container {
+	color: #fff;
+	width: 39% !important;
+	top: 40% !important;
+	left: 35% !important;
+	position: relative;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 8pt;
+    font-weight: bold;	
+}
+
+.info-container a {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 150px 150px 150px 150px;
+    color: #444444;
+    font-size: 14px;
+    padding: 2px;
+    text-decoration: none;
+}

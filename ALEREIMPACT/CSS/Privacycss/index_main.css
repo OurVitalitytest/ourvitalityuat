@@ -1,0 +1,13 @@
+#bubbles {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+#bubbles div {
+  left: 0;
+  top: 0;
+  display: block;
+  position: absolute;
+  border-radius: 1000px;
+  background-size: 100%;
+}
